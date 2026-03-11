@@ -77,4 +77,4 @@ Website: https://www.cnpf.fr/nos-actions-nos-outils/outils-et-techniques/archi
 ## Lizenz
 
 Software: MIT License
-Methode ARCHI: © CNPF / Christophe Drénou — Nutzung mit Genehmigung
+Methode ARCHI: © CNPF / Christophe Drénou — (Anfrage für Nutzung hängig)
