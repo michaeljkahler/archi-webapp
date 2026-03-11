@@ -1,5 +1,7 @@
 # ARCHI Web-App
 
+[![App starten](https://img.shields.io/badge/App_starten-ARCHI_Tool-4CAF50?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0tMiAxNWwtNS01IDEuNDEtMS40MUwxMCAxNC4xN2w3LjU5LTcuNTlMMTkgOGwtOSA5eiIvPjwvc3ZnPg==)](https://michaeljkahler.github.io/archi-webapp/)
+
 Interaktiver Bestimmungsschlüssel zur Vitalitätsdiagnose von Bäumen nach der Méthode ARCHI.
 
 ## Features
