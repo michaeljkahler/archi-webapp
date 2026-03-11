@@ -21,6 +21,7 @@
   },
   "species": {
     "select": "Baumart auswählen",
+    "subtitle": "8 Baumarten der ARCHI-Methode",
     "chenes_hetre": "Eichen und Buche",
     "chataignier": "Edelkastanie",
     "platane": "Platane",
@@ -55,7 +56,9 @@
     "show_flowchart": "Bestimmungsschlüssel anzeigen",
     "progress": "Fortschritt",
     "decision_path": "Entscheidungspfad",
-    "cannot_determine": "Kann nicht bestimmt werden"
+    "cannot_determine": "Kann nicht bestimmt werden",
+    "saved_success": "Diagnose gespeichert",
+    "back_to_site": "Zurück zum Bestand"
   },
   "states": {
     "sain": "Gesund",
@@ -127,7 +130,10 @@
     "species": "Baumart",
     "dbh": "BHD (cm)",
     "height": "Höhe (m)",
-    "notes": "Notizen"
+    "notes": "Notizen",
+    "save_and_diagnose": "Speichern & Diagnose starten",
+    "start_diagnosis": "Diagnose starten",
+    "rediagnose": "Neu diagnostizieren"
   },
   "export": {
     "csv": "Als CSV exportieren",

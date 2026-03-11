@@ -7,7 +7,7 @@ Interaktiver Bestimmungsschlüssel zur Vitalitätsdiagnose von Bäumen nach der 
 - **8 Baumarten**: Eichen/Buche, Kastanie, Platane, Douglasie, Fichte, Kiefern, Weisstanne, Atlaszeder
 - **Zweisprachig**: Deutsch / Français (automatische Spracherkennung)
 - **Interaktiver Entscheidungsbaum** mit DMA-Referenzbildern und Bestimmungsschlüssel-Overlay
-- **DMA-Glossar**: 20 Dendromarker mit Illustrationen und diagnostischem Wert
+- **DMA-Glossar**: 26 Dendromarker mit Illustrationen und diagnostischem Wert
 - **Bestandesmonitoring**: Standorte + Einzelbäume mit GPS-Erfassung
 - **Export**: CSV + PDF mit bilingualen Labels
 - **PWA**: Offline-fähig für Feldarbeit (Service Worker + IndexedDB)
@@ -54,7 +54,7 @@ src/
   components/    Navbar, Footer, CycleDiagram
   data/
     trees/       8 Entscheidungsbaum-JSONs
-    dma.json     20 Dendromarker (bilingual)
+    dma.json     26 Dendromarker (bilingual)
   hooks/         useLanguage, useGeolocation
   i18n/          de.json, fr.json
   pages/         HomePage, DiagnosisView, SiteSummary, etc.

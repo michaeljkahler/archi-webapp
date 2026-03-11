@@ -200,7 +200,22 @@
         "axes_dedifferencies"
       ],
       "yes": "JRp",
-      "no": "n_adulte_7"
+      "no": "n_jeune_mort75"
+    },
+    "n_jeune_mort75": {
+      "question": {
+        "de": "Ganzer Houppier: Raum mit Mortalität und/oder Lücken ≥75%?",
+        "fr": "Houppier entier : part de l'espace occupé par la mortalité et les « vides » liés aux chicots ≥ 75% ?"
+      },
+      "zone": {
+        "de": "Ganzer Houppier",
+        "fr": "Houppier entier"
+      },
+      "dma_refs": [
+        "mortalite_anormale"
+      ],
+      "yes": "JI2",
+      "no": "JS5"
     },
     "n_adulte_2": {
       "question": {

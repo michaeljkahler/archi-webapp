@@ -23,7 +23,7 @@ export default function SpeciesSelector() {
         <h1 className="text-3xl font-bold text-archi-forest mb-2">
           {t('species.select')}
         </h1>
-        <p className="text-gray-600">8 Baumarten / 8 essences</p>
+        <p className="text-gray-600">{t('species.subtitle')}</p>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

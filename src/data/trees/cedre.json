@@ -48,8 +48,43 @@
         "fr": "Si impossibilité de répondre → aller à la question notée #"
       },
       "yes": "n3",
+      "no": "n_p2_fourches",
+      "skip": "n_p2_fourches"
+    },
+    "n_p2_fourches": {
+      "question": {
+        "de": "Gipfeläste: Bilden ein Plateau aus gabelförmig duplizierten Hauptästen (Fourches)?",
+        "fr": "Branches sommitales : en plateau fait de branches maîtresses dupliquées en fourches ?"
+      },
+      "zone": {
+        "de": "Gipfeläste",
+        "fr": "Branches sommitales"
+      },
+      "dma_refs": [
+        "fourches_maitresses"
+      ],
+      "note": {
+        "de": "Falls nicht beurteilbar → zu Frage '#' gehen",
+        "fr": "Si impossibilité de répondre → aller à la question notée #"
+      },
+      "yes": "n_p2_type4",
       "no": "n_adulte_1",
       "skip": "n_adulte_1"
+    },
+    "n_p2_type4": {
+      "question": {
+        "de": "Ganzer Baum: Jahrestriebe n und n-1 vom Typ 4 (nur Kurztriebe)?",
+        "fr": "Arbre entier : pousses annuelles n et n-1 de type 4 ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [
+        "module_sommital"
+      ],
+      "yes": "Sn",
+      "no": "n_adulte_4"
     },
     "n3": {
       "question": {

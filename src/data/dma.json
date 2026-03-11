@@ -26,7 +26,7 @@
       },
       "category": "tronc",
       "guide_page": 13,
-      "illustration_extracted": "dma/guide_p13_0.png",
+      "illustration_extracted": "dma/guide_p13_2.png",
       "description": {
         "de": "Spaltung des Stammes in mehrere Hauptäste. Diese Verdopplung oder Mehrfachung des Stammes ist ein charakteristisches Merkmal der Baumarchitektur und beeinflusst die strukturelle Stabilität.",
         "fr": "Division du tronc en plusieurs branches maîtresses. Cette duplication ou multiplication du tronc est une caractéristique architecturale importante qui affecte la stabilité structurelle."
@@ -44,7 +44,7 @@
       },
       "category": "houppier",
       "guide_page": 14,
-      "illustration_extracted": "dma/guide_p14_0.png",
+      "illustration_extracted": "dma/guide_p14_2.png",
       "description": {
         "de": "Aufrecht stehende Äste in der Kronenkrone, die ein Zeichen des Erwachsenenstadiums sind. Diese vertikalen Strukturen entstehen durch eine Veränderung der Astorientierung mit dem Alter.",
         "fr": "Branches dressées au sommet de la couronne, signe du stade adulte. Ces structures verticales résultent d'une modification de l'orientation des branches avec l'âge."
@@ -80,7 +80,7 @@
       },
       "category": "branches",
       "guide_page": 16,
-      "illustration_extracted": "dma/guide_p16_0.png",
+      "illustration_extracted": "dma/guide_p16_2.png",
       "description": {
         "de": "Vereinfachtes Verzweigungsmuster mit Lücken in der Kronenstruktur. Der Mangel an feineren Verzweigungen deutet auf einen geschwächten Baum hin, der nicht genügend Triebe produziert.",
         "fr": "Motif de ramification simplifié avec des lacunes dans la structure de la couronne. Le manque de ramifications fines indique un arbre affaibli qui ne produit pas assez de pousses."
@@ -98,7 +98,7 @@
       },
       "category": "branches",
       "guide_page": 17,
-      "illustration_extracted": "dma/guide_p17_0.png",
+      "illustration_extracted": "dma/guide_p17_2.png",
       "description": {
         "de": "Durchhängend gekrümmte Äste, die ein Zeichen von Reife oder Seneszenz sind. Diese Verlagerung des Astwinkels nach unten ist eine natürliche Folge des Alterns und der Lastbelastung.",
         "fr": "Branches arquées et pendantes, signe de maturité ou de sénescence. Cette modification de l'angle de branche vers le bas est une conséquence naturelle du vieillissement et de la charge."
@@ -116,7 +116,7 @@
       },
       "category": "houppier",
       "guide_page": 18,
-      "illustration_extracted": "dma/guide_p18_0.png",
+      "illustration_extracted": "dma/guide_p18_2.png",
       "description": {
         "de": "Unerwarteter oder übermäßiger Blattverlust und Aststerben in der Krone. Diese abnormale Mortalität geht über die erwartete natürliche Seneszenz hinaus und zeigt Stress oder Krankheit.",
         "fr": "Perte de feuillage inattendue et mort des branches dans la couronne. Cette mortalité anormale dépasse la sénescence naturelle attendue et indique un stress ou une maladie."
@@ -188,7 +188,7 @@
       },
       "category": "houppier",
       "guide_page": 22,
-      "illustration_extracted": "dma/guide_p22_0.png",
+      "illustration_extracted": "dma/guide_p22_2.png",
       "description": {
         "de": "Ungewöhnliche Färbungen des Laubes wie Gelbfärbung, Rötung oder Verbleichung. Diese Verfärbungen gehen über natürliche saisonale Veränderungen hinaus und deuten auf physiologische Störungen hin.",
         "fr": "Colorations inhabituelles du feuillage comme le jaunissement, la rougeur ou la décoloration. Ces colorations anormales vont au-delà des changements saisonniers naturels et indiquent des perturbations physiologiques."
@@ -206,7 +206,7 @@
       },
       "category": "houppier",
       "guide_page": 23,
-      "illustration_extracted": "dma/guide_p23_0.png",
+      "illustration_extracted": "dma/guide_p23_1.png",
       "description": {
         "de": "Abnormale Verkleinerung von Blättern oder Nadeln über das normale Maß hinaus. Diese Reduktion der Blattgröße entsteht durch Stress und beeinträchtigt die Photosyntheseleistung.",
         "fr": "Réduction anormale de la taille des feuilles ou des aiguilles au-delà de la normale. Cette diminution de la taille des feuilles résulte du stress et compromet la performance photosynthétique."
@@ -314,7 +314,7 @@
       },
       "category": "fleche",
       "guide_page": 29,
-      "illustration_extracted": "dma/guide_p29_0.png",
+      "illustration_extracted": "dma/guide_p29_1.png",
       "description": {
         "de": "Der Führungstrieb und die oberen 6 Astwirtel bei Nadelbäumen. Die Flèche definiert die apikale Struktur und den Höhentrieb des Baumes und ist fundamental für die pyramidale Form.",
         "fr": "La flèche et les 6 verticilles de branches supérieurs chez les conifères. La flèche définit la structure apicale et la croissance en hauteur de l'arbre et est fondamentale pour la forme pyramidale."
@@ -343,6 +343,114 @@
       }
     },
     {
+      "id": "module_sommital",
+      "name": {
+        "de": "Stammmodul (Gipfelmodul)",
+        "fr": "Module sommital du tronc"
+      },
+      "category": "fleche",
+      "guide_page": null,
+      "illustration_extracted": null,
+      "description": {
+        "de": "Das Gipfelmodul des Stammes bei Zedern und Kastanien. Wird nach Typen klassifiziert (Typ 1-4): Typ 1 = vegetativ, Typ 2 = mit Zapfen/Frucht, Typ 3 = mit untergeordnetem Relais, Typ 4 = männlich.",
+        "fr": "Le module sommital du tronc chez les cèdres et les châtaigniers. Classé par types (type 1-4) : type 1 = végétatif, type 2 = avec cônes/fruits, type 3 = avec relai subordonné, type 4 = mâle."
+      },
+      "diagnostic_value": {
+        "de": "Der Typ des Gipfelmoduls zeigt das ontogenetische Stadium und die Vitalität des Baumes an. Höhere Typen deuten auf fortschreitendes Alter hin.",
+        "fr": "Le type de module sommital indique le stade ontogénétique et la vitalité de l'arbre. Des types plus élevés indiquent un âge plus avancé."
+      }
+    },
+    {
+      "id": "feuillage",
+      "name": {
+        "de": "Belaubung (Benadelung)",
+        "fr": "Feuillage"
+      },
+      "category": "houppier",
+      "guide_page": null,
+      "illustration_extracted": null,
+      "description": {
+        "de": "Die Gesamtheit der Blätter oder Nadeln eines Baumes. Bei Nadelbäumen wird beurteilt, ob das Feuillage den Stamm verdeckt oder ob dieser sichtbar ist.",
+        "fr": "L'ensemble des feuilles ou aiguilles d'un arbre. Chez les conifères, on évalue si le feuillage masque le tronc ou si celui-ci est visible."
+      },
+      "diagnostic_value": {
+        "de": "Dichtes Feuillage, das den Stamm verdeckt, deutet auf gute Vitalität hin. Sichtbarer Stamm durch das Feuillage zeigt Nadelverlust oder Kronenauflichtung.",
+        "fr": "Un feuillage dense qui masque le tronc indique une bonne vitalité. Un tronc visible à travers le feuillage indique une perte d'aiguilles ou un éclaircissement de la couronne."
+      }
+    },
+    {
+      "id": "rameaux",
+      "name": {
+        "de": "Zweige (Rameaux)",
+        "fr": "Rameaux"
+      },
+      "category": "branches",
+      "guide_page": null,
+      "illustration_extracted": null,
+      "description": {
+        "de": "Die feinen Verzweigungen an den Ästen, insbesondere bei Fichten. Es wird beurteilt, ob Rameaux auf der ganzen Astlänge vorhanden sind und ob ihre Länge zum Stamm hin zunimmt.",
+        "fr": "Les ramifications fines sur les branches, particulièrement chez les épicéas. On évalue si les rameaux sont présents sur toute la longueur des branches et si leur longueur augmente vers le tronc."
+      },
+      "diagnostic_value": {
+        "de": "Rameaux auf der ganzen Astlänge mit zunehmender Länge zum Stamm zeigen gute Vitalität. Fehlende oder ungleichmässig verteilte Rameaux deuten auf Stress hin.",
+        "fr": "Des rameaux présents sur toute la longueur des branches avec une longueur croissante vers le tronc indiquent une bonne vitalité. Des rameaux absents ou inégalement distribués indiquent un stress."
+      }
+    },
+    {
+      "id": "plateau",
+      "name": {
+        "de": "Plateaukrone",
+        "fr": "Plateau (couronne tabulaire)"
+      },
+      "category": "houppier",
+      "guide_page": null,
+      "illustration_extracted": null,
+      "description": {
+        "de": "Abgeflachte Kronenform bei alten Kiefern, bei der die Gipfeläste ein horizontales Plateau bilden. Typisch für das Maturitätsstadium bei Pinus-Arten.",
+        "fr": "Forme de couronne aplatie chez les vieux pins, où les branches sommitales forment un plateau horizontal. Typique du stade de maturité chez les espèces de Pinus."
+      },
+      "diagnostic_value": {
+        "de": "Eine Plateaukrone zeigt das Maturitätsstadium an. Wenn das Plateau aus fadenförmigen Achsen (Ficelles) besteht, deutet dies auf irreversiblen Verfall hin.",
+        "fr": "Un plateau indique le stade de maturité. Si le plateau est composé d'axes en ficelles, cela indique un dépérissement irréversible."
+      }
+    },
+    {
+      "id": "forme_architecturee",
+      "name": {
+        "de": "Architekturform (geschnittene Form)",
+        "fr": "Forme architecturée"
+      },
+      "category": "arbre_entier",
+      "guide_page": null,
+      "illustration_extracted": null,
+      "description": {
+        "de": "Baumform, die durch regelmässigen Schnitt geprägt wurde (z.B. Strassenbaum, Parkbaum). Spezifisch für Platanen. Diese Bäume folgen einem eigenen Bestimmungsschlüssel.",
+        "fr": "Forme d'arbre façonnée par une taille régulière (ex. arbre d'alignement, arbre de parc). Spécifique aux platanes. Ces arbres suivent une clé de détermination spécifique."
+      },
+      "diagnostic_value": {
+        "de": "Architekturform-Platanen werden nach einem angepassten Schlüssel diagnostiziert, da ihre Struktur durch menschlichen Eingriff verändert wurde.",
+        "fr": "Les platanes de forme architecturée sont diagnostiqués selon une clé adaptée, car leur structure a été modifiée par l'intervention humaine."
+      }
+    },
+    {
+      "id": "forme_etete",
+      "name": {
+        "de": "Gestutzte Form (étêtée)",
+        "fr": "Forme étêtée"
+      },
+      "category": "arbre_entier",
+      "guide_page": null,
+      "illustration_extracted": null,
+      "description": {
+        "de": "Baum, dessen Krone durch Kappen stark reduziert wurde. Spezifisch für Platanen. Étêtée Bäume zeigen eine charakteristische Wuchsform mit Neuaustrieb aus den Schnittstellen.",
+        "fr": "Arbre dont la couronne a été fortement réduite par étêtage. Spécifique aux platanes. Les arbres étêtés montrent une forme de croissance caractéristique avec de nouveaux rejets aux points de coupe."
+      },
+      "diagnostic_value": {
+        "de": "Gestutzte Platanen müssen gesondert beurteilt werden. Die Qualität des Neuaustriebs und die Wundreaktion bestimmen die Vitalitätsklasse.",
+        "fr": "Les platanes étêtés doivent être évalués séparément. La qualité des rejets et la réaction des plaies déterminent la classe de vitalité."
+      }
+    },
+    {
       "id": "module_types",
       "name": {
         "de": "Modultypen",
@@ -366,7 +474,7 @@
     "method": "ARCHI",
     "authors": "Drénou & CNPF",
     "language": "de,fr",
-    "total_markers": 20,
+    "total_markers": 26,
     "categories": [
       "houppier",
       "branches",

@@ -110,12 +110,10 @@ export default function SiteSummary() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       {/* Header */}
-      <div className="flex justify-between items-start mb-8">
-        <div>
-          <h1 className="text-3xl font-bold">{site.name}</h1>
-          <p className="text-gray-600 mt-2">{site.location || t('site.no_location')}</p>
-        </div>
-        <div className="flex gap-2">
+      <div className="mb-8">
+        <h1 className="text-2xl sm:text-3xl font-bold">{site.name}</h1>
+        <p className="text-gray-600 mt-2">{site.location || t('site.no_location')}</p>
+        <div className="flex gap-2 mt-4">
           <Link to="/sites" className="btn-secondary">
             {t('common.back')}
           </Link>
@@ -226,21 +224,52 @@ export default function SiteSummary() {
                       {tree.diagnosis && (
                         <div>
                           <p className="text-gray-600">{t('diagnosis.result')}</p>
-                          <p className="font-semibold text-archi-forest">
-                            {t(`states.${tree.diagnosis.category}`) !== `states.${tree.diagnosis.category}` ? t(`states.${tree.diagnosis.category}`) : tree.diagnosis.category}
-                          </p>
+                          <div className="flex items-center gap-2">
+                            <span
+                              className="inline-block px-2 py-0.5 rounded text-xs font-bold text-white"
+                              style={{ backgroundColor: tree.diagnosis.color || '#666' }}
+                            >
+                              {tree.diagnosis.code}
+                            </span>
+                            <span className="font-semibold text-sm">
+                              {t(`states.${tree.diagnosis.state || tree.diagnosis.category}`) !== `states.${tree.diagnosis.state || tree.diagnosis.category}`
+                                ? t(`states.${tree.diagnosis.state || tree.diagnosis.category}`)
+                                : tree.diagnosis.state || tree.diagnosis.category}
+                            </span>
+                          </div>
                         </div>
                       )}
                     </div>
                     {tree.notes && (
                       <p className="text-sm text-gray-600 mt-3">{tree.notes}</p>
                     )}
+                    {/* Diagnosis action */}
+                    {!tree.diagnosis && tree.species && (
+                      <div className="mt-3">
+                        <Link
+                          to={`/sites/${id}/trees/${tree.id}/diagnose/${tree.species}`}
+                          className="text-sm text-archi-forest font-semibold hover:underline"
+                        >
+                          {t('trees.start_diagnosis')} &rarr;
+                        </Link>
+                      </div>
+                    )}
+                    {tree.diagnosis && tree.species && (
+                      <div className="mt-3">
+                        <Link
+                          to={`/sites/${id}/trees/${tree.id}/diagnose/${tree.species}`}
+                          className="text-xs text-gray-500 hover:text-archi-forest hover:underline"
+                        >
+                          {t('trees.rediagnose')}
+                        </Link>
+                      </div>
+                    )}
                   </div>
                   <button
                     onClick={() => handleDeleteTree(tree.id)}
                     className="text-red-500 hover:text-red-700 p-1 ml-2"
                   >
-                    ✕
+                    {'\u2715'}
                   </button>
                 </div>
               </div>

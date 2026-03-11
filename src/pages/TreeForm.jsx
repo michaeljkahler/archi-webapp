@@ -3,26 +3,15 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useLanguage } from '../hooks/useLanguage'
 import { saveTree, getSite } from '../utils/storage'
 
-const SPECIES_OPTIONS = [
-  'Eiche (Quercus spp.)',
-  'Buche (Fagus sylvatica)',
-  'Edelkastanie (Castanea sativa)',
-  'Platane (Platanus × acerifolia)',
-  'Douglasie (Pseudotsuga menziesii)',
-  'Fichte (Picea abies)',
-  'Waldkiefer (Pinus sylvestris)',
-  'Schwarzkiefer (Pinus nigra)',
-  'Seekiefer (Pinus pinaster)',
-  'Weisstanne (Abies alba)',
-  'Atlaszeder (Cedrus atlantica)',
-  'Korkeiche (Quercus suber)',
-  'Bergahorn (Acer pseudoplatanus)',
-  'Spitzahorn (Acer platanoides)',
-  'Esche (Fraxinus excelsior)',
-  'Linde (Tilia spp.)',
-  'Birke (Betula spp.)',
-  'Hainbuche (Carpinus betulus)',
-  'Lärche (Larix decidua)',
+const ARCHI_SPECIES = [
+  { id: 'chenes_hetre', icon: '\u{1F333}', latin: 'Quercus spp. & Fagus sylvatica' },
+  { id: 'chataignier', icon: '\u{1F330}', latin: 'Castanea sativa' },
+  { id: 'platane', icon: '\u{1F341}', latin: 'Platanus \u00d7 acerifolia' },
+  { id: 'douglas', icon: '\u{1F332}', latin: 'Pseudotsuga menziesii' },
+  { id: 'epicea', icon: '\u{1F384}', latin: 'Picea abies' },
+  { id: 'pins', icon: '\u{1F332}', latin: 'Pinus spp.' },
+  { id: 'sapin_pectine', icon: '\u{1F332}', latin: 'Abies alba' },
+  { id: 'cedre_atlas', icon: '\u{1F33F}', latin: 'Cedrus atlantica' },
 ]
 
 export default function TreeForm() {
@@ -32,7 +21,6 @@ export default function TreeForm() {
 
   const [site, setSite] = useState(null)
   const [formData, setFormData] = useState({
-    siteId,
     species: '',
     dbh: '',
     height: '',
@@ -41,25 +29,10 @@ export default function TreeForm() {
   const [submitting, setSubmitting] = useState(false)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  const [filteredSpecies, setFilteredSpecies] = useState([])
-  const [showDropdown, setShowDropdown] = useState(false)
 
   useEffect(() => {
     loadSite()
   }, [siteId])
-
-  useEffect(() => {
-    if (formData.species.length > 0) {
-      const filtered = SPECIES_OPTIONS.filter(s =>
-        s.toLowerCase().includes(formData.species.toLowerCase())
-      ).slice(0, 8)
-      setFilteredSpecies(filtered)
-      setShowDropdown(filtered.length > 0)
-    } else {
-      setFilteredSpecies([])
-      setShowDropdown(false)
-    }
-  }, [formData.species])
 
   const loadSite = async () => {
     try {
@@ -76,35 +49,27 @@ export default function TreeForm() {
     }
   }
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
-  }
-
-  const selectSpecies = (species) => {
-    setFormData(prev => ({ ...prev, species }))
-    setShowDropdown(false)
-  }
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError(null)
 
-    if (!formData.species.trim()) {
-      setError(t('trees.species') + ' ist erforderlich')
+    if (!formData.species) {
+      setError(t('common.required'))
       return
     }
 
     try {
       setSubmitting(true)
       const treeData = {
-        ...formData,
+        siteId,
+        species: formData.species,
         dbh: formData.dbh ? parseFloat(formData.dbh) : null,
         height: formData.height ? parseFloat(formData.height) : null,
+        notes: formData.notes,
         date: new Date().toISOString(),
       }
-      await saveTree(treeData)
-      navigate(`/sites/${siteId}`)
+      const saved = await saveTree(treeData)
+      navigate(`/sites/${siteId}/trees/${saved.id}/diagnose/${formData.species}`)
     } catch (err) {
       setError(err.message)
     } finally {
@@ -130,8 +95,8 @@ export default function TreeForm() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-4">{t('trees.title')} {t('common.add')}</h1>
-      <p className="text-gray-600 mb-8">{t('sites.title')}: {site.name}</p>
+      <h1 className="text-3xl font-bold mb-2">{t('trees.title')} {t('common.add')}</h1>
+      <p className="text-gray-600 mb-6">{t('sites.title')}: {site.name}</p>
 
       {error && (
         <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6 text-red-700">
@@ -139,52 +104,42 @@ export default function TreeForm() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="card">
-        <div className="space-y-6">
-          {/* Species Field */}
-          <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
-              {t('trees.species')} <span className="text-red-500">*</span>
-            </label>
-            <div className="relative">
-              <input
-                type="text"
-                name="species"
-                value={formData.species}
-                onChange={handleInputChange}
-                onFocus={() => setShowDropdown(filteredSpecies.length > 0)}
-                placeholder={t('trees.species')}
-                className="input-field"
-                autoComplete="off"
-                required
-              />
-              {showDropdown && filteredSpecies.length > 0 && (
-                <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
-                  {filteredSpecies.map((species, idx) => (
-                    <button
-                      key={idx}
-                      type="button"
-                      onClick={() => selectSpecies(species)}
-                      className="w-full text-left px-4 py-2 hover:bg-gray-100 transition-colors text-sm"
-                    >
-                      {species}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+      <form onSubmit={handleSubmit}>
+        {/* Species Selection */}
+        <div className="mb-6">
+          <label className="block text-sm font-semibold text-gray-700 mb-3">
+            {t('trees.species')} <span className="text-red-500">*</span>
+          </label>
+          <div className="grid grid-cols-2 gap-3">
+            {ARCHI_SPECIES.map(sp => (
+              <button
+                key={sp.id}
+                type="button"
+                onClick={() => setFormData(prev => ({ ...prev, species: sp.id }))}
+                className={`p-3 rounded-xl border-2 text-left transition-all ${
+                  formData.species === sp.id
+                    ? 'border-archi-forest bg-green-50 ring-2 ring-archi-forest/30'
+                    : 'border-gray-200 hover:border-gray-300'
+                }`}
+              >
+                <span className="text-2xl">{sp.icon}</span>
+                <p className="font-semibold text-sm mt-1">{t(`species.${sp.id}`)}</p>
+                <p className="text-xs text-gray-500 italic">{sp.latin}</p>
+              </button>
+            ))}
           </div>
+        </div>
 
-          {/* DBH Field */}
+        {/* Optional fields */}
+        <div className="card space-y-6">
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               {t('trees.dbh')}
             </label>
             <input
               type="number"
-              name="dbh"
               value={formData.dbh}
-              onChange={handleInputChange}
+              onChange={e => setFormData(prev => ({ ...prev, dbh: e.target.value }))}
               placeholder="0"
               min="0"
               step="0.1"
@@ -192,16 +147,14 @@ export default function TreeForm() {
             />
           </div>
 
-          {/* Height Field */}
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               {t('trees.height')}
             </label>
             <input
               type="number"
-              name="height"
               value={formData.height}
-              onChange={handleInputChange}
+              onChange={e => setFormData(prev => ({ ...prev, height: e.target.value }))}
               placeholder="0"
               min="0"
               step="0.1"
@@ -209,25 +162,26 @@ export default function TreeForm() {
             />
           </div>
 
-          {/* Notes Field */}
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               {t('trees.notes')}
             </label>
             <textarea
-              name="notes"
               value={formData.notes}
-              onChange={handleInputChange}
+              onChange={e => setFormData(prev => ({ ...prev, notes: e.target.value }))}
               placeholder={t('trees.notes')}
               className="input-field resize-none"
-              rows="4"
+              rows="3"
             />
           </div>
 
-          {/* Buttons */}
           <div className="flex gap-4 pt-4">
-            <button type="submit" disabled={submitting} className="btn-primary flex-1">
-              {submitting ? t('common.loading') : t('common.save')}
+            <button
+              type="submit"
+              disabled={submitting || !formData.species}
+              className="btn-primary flex-1 disabled:opacity-40"
+            >
+              {submitting ? t('common.loading') : t('trees.save_and_diagnose')}
             </button>
             <button
               type="button"

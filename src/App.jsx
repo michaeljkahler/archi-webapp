@@ -25,6 +25,7 @@ function App() {
             <Route path="/sites/new" element={<SiteForm />} />
             <Route path="/sites/:id" element={<SiteSummary />} />
             <Route path="/sites/:id/tree/new" element={<TreeForm />} />
+            <Route path="/sites/:siteId/trees/:treeId/diagnose/:species" element={<DiagnosisView />} />
             <Route path="/diagnose" element={<SpeciesSelector />} />
             <Route path="/diagnose/:species" element={<DiagnosisView />} />
             <Route path="/glossary" element={<DMAGlossary />} />

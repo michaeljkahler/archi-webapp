@@ -108,9 +108,11 @@ export default function DMAGlossary() {
                         <h3 className="font-semibold text-gray-900">
                           {marker.name?.[language] || marker.id.replace(/_/g, ' ')}
                         </h3>
-                        <p className="text-xs text-gray-400 mt-0.5">
-                          {t('glossary.guide_page')} {marker.guide_page}
-                        </p>
+                        {marker.guide_page && (
+                          <p className="text-xs text-gray-400 mt-0.5">
+                            {t('glossary.guide_page')} {marker.guide_page}
+                          </p>
+                        )}
                       </div>
                       <span className="text-2xl text-gray-400 ml-2">
                         {expandedItems[marker.id] ? '−' : '+'}

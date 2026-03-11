@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useLanguage } from '../hooks/useLanguage'
 import { TreeEngine } from '../utils/treeEngine'
+import { updateTree } from '../utils/storage'
 import dmaData from '../data/dma.json'
 
 // Dynamic imports for all 8 species
@@ -18,7 +19,7 @@ const treeFiles = {
 
 export default function DiagnosisView() {
   const { t, language } = useLanguage()
-  const { species } = useParams()
+  const { species, siteId, treeId } = useParams()
   const navigate = useNavigate()
 
   const [engine, setEngine] = useState(null)
@@ -28,6 +29,10 @@ export default function DiagnosisView() {
   const [error, setError] = useState(null)
   const [showFlowchart, setShowFlowchart] = useState(false)
   const [showDmaHelp, setShowDmaHelp] = useState(null)
+  const [saving, setSaving] = useState(false)
+  const [saved, setSaved] = useState(false)
+
+  const isTreeLinked = !!treeId && !!siteId
 
   useEffect(() => {
     loadSpecies()
@@ -72,7 +77,38 @@ export default function DiagnosisView() {
 
   const handleReset = () => {
     engine.reset()
+    setSaved(false)
     forceUpdate()
+  }
+
+  const handleSave = async () => {
+    if (!treeId || !engine) return
+    try {
+      setSaving(true)
+      const result = engine.getResult()
+      const path = engine.getPath()
+      await updateTree(treeId, {
+        diagnosis: {
+          code: result.code,
+          label: result.label,
+          stage: result.stage,
+          state: result.state,
+          category: result.state,
+          color: result.color,
+        },
+        decision_path: path.map(step => ({
+          node: step.nodeId,
+          question: step.question,
+          answer: step.answer,
+        })),
+        diagnosis_date: new Date().toISOString(),
+      })
+      setSaved(true)
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setSaving(false)
+    }
   }
 
   if (loading) {
@@ -87,7 +123,9 @@ export default function DiagnosisView() {
     return (
       <div className="max-w-2xl mx-auto px-4 py-8">
         <div className="bg-red-50 border border-red-200 rounded-xl p-6 text-red-700 mb-4">{error}</div>
-        <button onClick={() => navigate('/diagnose')} className="btn-primary">{t('common.back')}</button>
+        <button onClick={() => navigate(isTreeLinked ? `/sites/${siteId}` : '/diagnose')} className="btn-primary">
+          {t('common.back')}
+        </button>
       </div>
     )
   }
@@ -132,7 +170,7 @@ export default function DiagnosisView() {
               {engine.getPath().map((step, i) => (
                 <div key={i} className="text-sm flex gap-2">
                   <span className={`font-bold ${step.answer === 'yes' ? 'text-green-600' : step.answer === 'no' ? 'text-red-600' : 'text-gray-400'}`}>
-                    {step.answer === 'yes' ? 'OUI' : step.answer === 'no' ? 'NON' : '→'}
+                    {step.answer === 'yes' ? 'OUI' : step.answer === 'no' ? 'NON' : '\u2192'}
                   </span>
                   <span className="text-gray-600 truncate">
                     {step.question?.[language] || step.question?.fr || step.nodeId}
@@ -142,16 +180,48 @@ export default function DiagnosisView() {
             </div>
           </div>
 
+          {/* Action buttons */}
           <div className="flex flex-col gap-3">
-            <button onClick={handleReset} className="btn-primary w-full">
-              {t('diagnosis.restart')}
-            </button>
-            <button onClick={() => navigate('/diagnose')} className="btn-secondary w-full">
-              {t('species.select')}
-            </button>
-            <button onClick={() => navigate('/')} className="btn-secondary w-full">
-              {t('common.back')}
-            </button>
+            {/* Tree-linked mode: save + navigation */}
+            {isTreeLinked && !saved && (
+              <>
+                <button onClick={handleSave} disabled={saving} className="btn-primary w-full">
+                  {saving ? t('common.loading') : t('diagnosis.save')}
+                </button>
+                <button onClick={handleReset} className="btn-secondary w-full">
+                  {t('diagnosis.restart')}
+                </button>
+              </>
+            )}
+
+            {isTreeLinked && saved && (
+              <>
+                <div className="bg-green-50 border border-green-200 rounded-lg p-3 text-green-700 text-center text-sm">
+                  {t('diagnosis.saved_success')}
+                </div>
+                <button onClick={() => navigate(`/sites/${siteId}/tree/new`)} className="btn-primary w-full">
+                  {t('diagnosis.next_tree')}
+                </button>
+                <button onClick={() => navigate(`/sites/${siteId}`)} className="btn-secondary w-full">
+                  {t('diagnosis.back_to_site')}
+                </button>
+              </>
+            )}
+
+            {/* Quick diagnosis mode (no tree linked) */}
+            {!isTreeLinked && (
+              <>
+                <button onClick={handleReset} className="btn-primary w-full">
+                  {t('diagnosis.restart')}
+                </button>
+                <button onClick={() => navigate('/diagnose')} className="btn-secondary w-full">
+                  {t('species.select')}
+                </button>
+                <button onClick={() => navigate('/')} className="btn-secondary w-full">
+                  {t('common.back')}
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -214,15 +284,18 @@ export default function DiagnosisView() {
         {/* DMA help links */}
         {dmaRefs.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-6">
-            {dmaRefs.map(ref => (
-              <button
-                key={ref}
-                onClick={() => setShowDmaHelp(showDmaHelp === ref ? null : ref)}
-                className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-lg hover:bg-blue-100 transition-colors"
-              >
-                {t('diagnosis.help')}: {ref.replace(/_/g, ' ')}
-              </button>
-            ))}
+            {dmaRefs.map(ref => {
+              const dma = dmaData.dendromarkers.find(d => d.id === ref)
+              return (
+                <button
+                  key={ref}
+                  onClick={() => setShowDmaHelp(showDmaHelp === ref ? null : ref)}
+                  className="text-xs bg-blue-50 text-blue-700 px-3 py-1.5 rounded-lg hover:bg-blue-100 transition-colors min-h-touch flex items-center"
+                >
+                  {t('diagnosis.help')}: {dma?.name?.[language] || ref.replace(/_/g, ' ')}
+                </button>
+              )
+            })}
           </div>
         )}
 
@@ -235,17 +308,19 @@ export default function DiagnosisView() {
                 <h4 className="font-bold text-sm text-blue-800">
                   {dmaItem?.name?.[language] || showDmaHelp.replace(/_/g, ' ')}
                 </h4>
-                <button onClick={() => setShowDmaHelp(null)} className="text-blue-400 hover:text-blue-600">✕</button>
+                <button onClick={() => setShowDmaHelp(null)} className="text-blue-400 hover:text-blue-600">{'\u2715'}</button>
               </div>
               {dmaItem?.description?.[language] && (
                 <p className="text-sm text-gray-700 mb-3">{dmaItem.description[language]}</p>
               )}
-              <img
-                src={`${import.meta.env.BASE_URL}images/${dmaItem?.illustration_extracted || 'dma/guide_p24_0.png'}`}
-                alt={dmaItem?.name?.[language] || showDmaHelp}
-                className="rounded-lg max-w-full h-auto"
-                onError={(e) => e.target.style.display = 'none'}
-              />
+              {dmaItem?.illustration_extracted && (
+                <img
+                  src={`${import.meta.env.BASE_URL}images/${dmaItem.illustration_extracted}`}
+                  alt={dmaItem?.name?.[language] || showDmaHelp}
+                  className="rounded-lg max-w-full h-auto"
+                  onError={(e) => e.target.style.display = 'none'}
+                />
+              )}
               {dmaItem?.diagnostic_value?.[language] && (
                 <p className="text-xs text-blue-700 mt-2 italic">{dmaItem.diagnostic_value[language]}</p>
               )}
@@ -268,7 +343,7 @@ export default function DiagnosisView() {
             onClick={() => handleAnswer('skip')}
             className="btn-skip w-full mt-3"
           >
-            {t('diagnosis.skip') || 'Kann nicht beurteilt werden / Impossible de répondre'}
+            {t('diagnosis.skip')}
           </button>
         )}
       </div>
@@ -299,7 +374,7 @@ export default function DiagnosisView() {
           <div className="bg-white rounded-2xl p-4 max-w-4xl max-h-[90vh] overflow-auto" onClick={e => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-3">
               <h3 className="font-bold">{t('diagnosis.show_flowchart')}</h3>
-              <button onClick={() => setShowFlowchart(false)} className="text-gray-400 hover:text-gray-600 text-xl">✕</button>
+              <button onClick={() => setShowFlowchart(false)} className="text-gray-400 hover:text-gray-600 text-xl">{'\u2715'}</button>
             </div>
             {treeData.flowchart_images.map((img, idx) => (
               <img
@@ -310,7 +385,7 @@ export default function DiagnosisView() {
               />
             ))}
             <p className="text-xs text-gray-400 mt-2 text-center">
-              © CNPF — Drénou C., 2023
+              &copy; CNPF &mdash; Dr&eacute;nou C., 2023
             </p>
           </div>
         </div>

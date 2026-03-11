@@ -21,6 +21,7 @@
   },
   "species": {
     "select": "Sélectionner une essence",
+    "subtitle": "8 essences de la méthode ARCHI",
     "chenes_hetre": "Chênes et Hêtre",
     "chataignier": "Châtaignier",
     "platane": "Platane commun",
@@ -55,7 +56,9 @@
     "show_flowchart": "Afficher la clé de détermination",
     "progress": "Progression",
     "decision_path": "Chemin décisionnel",
-    "cannot_determine": "Ne peut pas être déterminé"
+    "cannot_determine": "Ne peut pas être déterminé",
+    "saved_success": "Diagnostic enregistré",
+    "back_to_site": "Retour au peuplement"
   },
   "states": {
     "sain": "Sain",
@@ -127,7 +130,10 @@
     "species": "Essence",
     "dbh": "DHP (cm)",
     "height": "Hauteur (m)",
-    "notes": "Notes"
+    "notes": "Notes",
+    "save_and_diagnose": "Enregistrer & lancer le diagnostic",
+    "start_diagnosis": "Lancer le diagnostic",
+    "rediagnose": "Refaire le diagnostic"
   },
   "export": {
     "csv": "Exporter en CSV",
