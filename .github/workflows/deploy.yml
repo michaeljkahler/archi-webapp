@@ -24,23 +24,18 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: archi-webapp/package-lock.json
 
       - name: Install dependencies
-        working-directory: archi-webapp
         run: npm ci
 
       - name: Build
-        working-directory: archi-webapp
-        env:
-          BASE_URL: /${{ github.event.repository.name }}/
         run: |
           sed -i "s|base: './'|base: '/${{ github.event.repository.name }}/'|" vite.config.js
           npm run build
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: archi-webapp/dist
+          path: dist
 
   deploy:
     needs: build
