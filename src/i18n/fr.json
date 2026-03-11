@@ -142,7 +142,7 @@
   },
   "glossary": {
     "title": "Glossaire",
-    "subtitle": "Référentiel des dendromarqueurs (DMA) pour l'évaluation de la vitalité",
+    "subtitle": "Référentiel des 26 dendromarqueurs (DMA) de la méthode ARCHI",
     "search": "Rechercher dans le glossaire",
     "category": "Catégorie",
     "description": "Description",
@@ -153,6 +153,7 @@
     "categories": {
       "houppier": "Houppier (Couronne)",
       "branches": "Branches et ramification",
+      "suppleants": "Suppléants",
       "tronc": "Tronc",
       "fleche": "Flèche",
       "arbre_entier": "Arbre entier"

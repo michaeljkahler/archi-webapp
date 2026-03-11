@@ -142,7 +142,7 @@
   },
   "glossary": {
     "title": "Glossar",
-    "subtitle": "Nachschlagewerk der Dendromarker (DMA) zur Vitalitätsbewertung",
+    "subtitle": "Nachschlagewerk der 26 Dendromarker (DMA) der ARCHI-Methode",
     "search": "Im Glossar suchen",
     "category": "Kategorie",
     "description": "Beschreibung",
@@ -153,6 +153,7 @@
     "categories": {
       "houppier": "Kronenbereich (Houppier)",
       "branches": "Äste und Verzweigung",
+      "suppleants": "Ersatztriebe (Suppléants)",
       "tronc": "Stamm",
       "fleche": "Wipfeltrieb (Flèche)",
       "arbre_entier": "Ganzer Baum"

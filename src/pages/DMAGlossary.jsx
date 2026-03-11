@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react'
 import { useLanguage } from '../hooks/useLanguage'
 import dmaData from '../data/dma.json'
 
-const CATEGORY_ORDER = ['houppier', 'branches', 'tronc', 'fleche', 'arbre_entier']
+const CATEGORY_ORDER = ['houppier', 'branches', 'suppleants', 'tronc', 'fleche', 'arbre_entier']
 
 export default function DMAGlossary() {
   const { t, language } = useLanguage()

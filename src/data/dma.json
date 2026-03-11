@@ -42,7 +42,7 @@
         "de": "Vertikale Gipfeläste",
         "fr": "Branches verticales du sommet"
       },
-      "category": "houppier",
+      "category": "branches",
       "guide_page": 14,
       "illustration_extracted": "dma/guide_p14_2.png",
       "description": {
@@ -222,7 +222,7 @@
         "de": "Orthotrope Ersatztriebe",
         "fr": "Suppléants orthotropes"
       },
-      "category": "houppier",
+      "category": "suppleants",
       "guide_page": 24,
       "illustration_extracted": "dma/guide_p24_0.png",
       "description": {
@@ -240,7 +240,7 @@
         "de": "Plagiotrope Ersatztriebe",
         "fr": "Suppléants plagiotropes"
       },
-      "category": "houppier",
+      "category": "suppleants",
       "guide_page": 25,
       "illustration_extracted": "dma/guide_p25_0.png",
       "description": {
@@ -258,7 +258,7 @@
         "de": "Ageotrope Ersatztriebe",
         "fr": "Suppléants agéotropes"
       },
-      "category": "houppier",
+      "category": "suppleants",
       "guide_page": 26,
       "illustration_extracted": "dma/guide_p26_0.png",
       "description": {
@@ -330,7 +330,7 @@
         "de": "Dedifferenzierte Achsen",
         "fr": "Axes dédifférenciés"
       },
-      "category": "branches",
+      "category": "fleche",
       "guide_page": 30,
       "illustration_extracted": "dma/guide_p30_0.png",
       "description": {
@@ -349,8 +349,8 @@
         "fr": "Module sommital du tronc"
       },
       "category": "fleche",
-      "guide_page": null,
-      "illustration_extracted": null,
+      "guide_page": 31,
+      "illustration_extracted": "dma/guide_p31_0.png",
       "description": {
         "de": "Das Gipfelmodul des Stammes bei Zedern und Kastanien. Wird nach Typen klassifiziert (Typ 1-4): Typ 1 = vegetativ, Typ 2 = mit Zapfen/Frucht, Typ 3 = mit untergeordnetem Relais, Typ 4 = männlich.",
         "fr": "Le module sommital du tronc chez les cèdres et les châtaigniers. Classé par types (type 1-4) : type 1 = végétatif, type 2 = avec cônes/fruits, type 3 = avec relai subordonné, type 4 = mâle."
@@ -367,8 +367,8 @@
         "fr": "Feuillage"
       },
       "category": "houppier",
-      "guide_page": null,
-      "illustration_extracted": null,
+      "guide_page": 56,
+      "illustration_extracted": "dma/guide_p56_0.png",
       "description": {
         "de": "Die Gesamtheit der Blätter oder Nadeln eines Baumes. Bei Nadelbäumen wird beurteilt, ob das Feuillage den Stamm verdeckt oder ob dieser sichtbar ist.",
         "fr": "L'ensemble des feuilles ou aiguilles d'un arbre. Chez les conifères, on évalue si le feuillage masque le tronc ou si celui-ci est visible."
@@ -385,8 +385,8 @@
         "fr": "Rameaux"
       },
       "category": "branches",
-      "guide_page": null,
-      "illustration_extracted": null,
+      "guide_page": 52,
+      "illustration_extracted": "dma/guide_p52_0.png",
       "description": {
         "de": "Die feinen Verzweigungen an den Ästen, insbesondere bei Fichten. Es wird beurteilt, ob Rameaux auf der ganzen Astlänge vorhanden sind und ob ihre Länge zum Stamm hin zunimmt.",
         "fr": "Les ramifications fines sur les branches, particulièrement chez les épicéas. On évalue si les rameaux sont présents sur toute la longueur des branches et si leur longueur augmente vers le tronc."
@@ -403,8 +403,8 @@
         "fr": "Plateau (couronne tabulaire)"
       },
       "category": "houppier",
-      "guide_page": null,
-      "illustration_extracted": null,
+      "guide_page": 54,
+      "illustration_extracted": "dma/guide_p54_1.png",
       "description": {
         "de": "Abgeflachte Kronenform bei alten Kiefern, bei der die Gipfeläste ein horizontales Plateau bilden. Typisch für das Maturitätsstadium bei Pinus-Arten.",
         "fr": "Forme de couronne aplatie chez les vieux pins, où les branches sommitales forment un plateau horizontal. Typique du stade de maturité chez les espèces de Pinus."
@@ -421,8 +421,8 @@
         "fr": "Forme architecturée"
       },
       "category": "arbre_entier",
-      "guide_page": null,
-      "illustration_extracted": null,
+      "guide_page": 40,
+      "illustration_extracted": "dma/guide_p40_0.png",
       "description": {
         "de": "Baumform, die durch regelmässigen Schnitt geprägt wurde (z.B. Strassenbaum, Parkbaum). Spezifisch für Platanen. Diese Bäume folgen einem eigenen Bestimmungsschlüssel.",
         "fr": "Forme d'arbre façonnée par une taille régulière (ex. arbre d'alignement, arbre de parc). Spécifique aux platanes. Ces arbres suivent une clé de détermination spécifique."
@@ -439,8 +439,8 @@
         "fr": "Forme étêtée"
       },
       "category": "arbre_entier",
-      "guide_page": null,
-      "illustration_extracted": null,
+      "guide_page": 40,
+      "illustration_extracted": "dma/guide_p40_2.png",
       "description": {
         "de": "Baum, dessen Krone durch Kappen stark reduziert wurde. Spezifisch für Platanen. Étêtée Bäume zeigen eine charakteristische Wuchsform mit Neuaustrieb aus den Schnittstellen.",
         "fr": "Arbre dont la couronne a été fortement réduite par étêtage. Spécifique aux platanes. Les arbres étêtés montrent une forme de croissance caractéristique avec de nouveaux rejets aux points de coupe."
@@ -478,9 +478,10 @@
     "categories": [
       "houppier",
       "branches",
+      "suppleants",
       "tronc",
-      "arbre_entier",
-      "fleche"
+      "fleche",
+      "arbre_entier"
     ]
   }
 }
