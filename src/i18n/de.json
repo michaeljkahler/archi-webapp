@@ -1,0 +1,180 @@
+{
+  "app": {
+    "title": "ARCHI – Bewertung der Baumvitalität",
+    "subtitle": "Diagnose der Vitalität mit der ARCHI-Methode",
+    "footer_citation": "Drénou C., 2023 – Évaluer la vitalité des arbres. Guide d'utilisation de la méthode ARCHI. Éditions CNPF-IDF, Paris, 64 p."
+  },
+  "nav": {
+    "home": "Startseite",
+    "diagnose": "Diagnose",
+    "sites": "Bestände",
+    "glossary": "Glossar",
+    "about": "Über"
+  },
+  "home": {
+    "title": "ARCHI Diagnose System",
+    "subtitle": "Bewerten Sie die Vitalität von Bäumen mit der ARCHI-Methode",
+    "start_diagnosis": "Diagnose starten",
+    "manage_sites": "Bestände verwalten",
+    "quick_diagnosis": "Schnelldiagnose",
+    "view_glossary": "Glossar anzeigen"
+  },
+  "species": {
+    "select": "Baumart auswählen",
+    "chenes_hetre": "Eichen und Buche",
+    "chataignier": "Edelkastanie",
+    "platane": "Platane",
+    "douglas": "Douglasie",
+    "epicea": "Fichte",
+    "pins": "Kiefern",
+    "sapin_pectine": "Weisstanne",
+    "cedre_atlas": "Atlaszeder",
+    "latin": {
+      "chenes_hetre": "Quercus spp. & Fagus sylvatica",
+      "chataignier": "Castanea sativa",
+      "platane": "Platanus acerifolia",
+      "douglas": "Pseudotsuga menziesii",
+      "epicea": "Picea abies",
+      "pins": "Pinus spp.",
+      "sapin_pectine": "Abies alba",
+      "cedre_atlas": "Cedrus atlantica"
+    }
+  },
+  "diagnosis": {
+    "question": "Frage",
+    "of": "von",
+    "yes": "Ja",
+    "no": "Nein",
+    "skip": "Überspringen",
+    "back": "Zurück",
+    "restart": "Neu starten",
+    "help": "Hilfe",
+    "result": "Ergebnis",
+    "save": "Speichern",
+    "next_tree": "Nächster Baum",
+    "show_flowchart": "Bestimmungsschlüssel anzeigen",
+    "progress": "Fortschritt",
+    "decision_path": "Entscheidungspfad",
+    "cannot_determine": "Kann nicht bestimmt werden"
+  },
+  "states": {
+    "sain": "Gesund",
+    "stresse": "Gestresst",
+    "resilient": "Resilient",
+    "descente_cime": "Kronenrückzug",
+    "repli": "Repli",
+    "deperissement_irreversible": "Irreversibler Verfall",
+    "mort": "Tot",
+    "senescent": "Seneszent",
+    "colonie": "Kolonie"
+  },
+  "stages": {
+    "jeune": "Jungbaum",
+    "adulte": "Erwachsener Baum",
+    "mature": "Reifer Baum",
+    "senescent": "Alter Baum"
+  },
+  "site": {
+    "title": "Bestand",
+    "new": "Neuer Bestand",
+    "list": "Bestandsliste",
+    "name": "Bestandsname",
+    "observer": "Beobachter",
+    "date": "Datum",
+    "forest_type": "Waldtyp",
+    "region": "Region",
+    "notes": "Notizen",
+    "capture_gps": "GPS erfassen",
+    "accuracy": "Genauigkeit",
+    "tree_count": "Baumanzahl",
+    "summary": "Zusammenfassung",
+    "no_sites": "Keine Bestände vorhanden",
+    "delete_confirm": "Bestand wirklich löschen?",
+    "edit": "Bestand bearbeiten"
+  },
+  "sites": {
+    "title": "Bestände",
+    "newSite": "Neuer Bestand",
+    "noSites": "Keine Bestände vorhanden",
+    "addFirst": "Ersten Bestand anlegen",
+    "confirmDelete": "Bestand wirklich löschen?",
+    "location": "Standort",
+    "date": "Datum",
+    "observer": "Beobachter",
+    "name": "Bestandsname",
+    "addTree": "Baum hinzufügen"
+  },
+  "tree": {
+    "title": "Baum",
+    "number": "Baumnummer",
+    "dbh": "BHD (cm)",
+    "position": "Kronenposition",
+    "dominant": "Herrschend",
+    "codominant": "Mittherrschend",
+    "suppressed": "Unterdrückt",
+    "photo_ref": "Referenzfoto",
+    "notes": "Notizen",
+    "capture_gps": "GPS erfassen",
+    "quick_diagnosis": "Schnelldiagnose",
+    "no_trees": "Keine Bäume vorhanden"
+  },
+  "trees": {
+    "title": "Bäume",
+    "noTrees": "Keine Bäume vorhanden",
+    "species": "Baumart",
+    "dbh": "BHD (cm)",
+    "height": "Höhe (m)",
+    "notes": "Notizen"
+  },
+  "export": {
+    "csv": "Als CSV exportieren",
+    "pdf": "Als PDF exportieren",
+    "export_title": "Ergebnisse exportieren"
+  },
+  "glossary": {
+    "title": "Glossar",
+    "search": "Im Glossar suchen",
+    "category": "Kategorie",
+    "description": "Beschreibung",
+    "guide_page": "Handbuchseite",
+    "all_categories": "Alle Kategorien",
+    "noResults": "Keine Ergebnisse gefunden"
+  },
+  "about": {
+    "title": "Über diese Anwendung",
+    "method_description": "Die ARCHI-Methode ist ein strukturiertes Diagnoseverfahren zur Bewertung der Vitalität von Bäumen basierend auf visuellen Merkmalen und Indikatoren für Stress und Vitalität.",
+    "methodology": "Die ARCHI-Methode",
+    "description": "Die ARCHI-Methode ist ein strukturiertes Diagnoseverfahren zur Bewertung der Vitalität von Bäumen basierend auf visuellen Merkmalen und Indikatoren für Stress und Vitalität.",
+    "methodologyText": "Durch die systematische Beobachtung von Dendromarkern (DMA) wie Kronenform, Blattverlust, Stammschäden und Regenerationszeichen kann der Vitalitätszustand eines Baumes zuverlässig eingeschätzt werden.",
+    "citation": "Quellenangabe",
+    "citationText": "Drénou C., 2023 – Évaluer la vitalité des arbres. Guide d'utilisation de la méthode ARCHI. Éditions CNPF-IDF, Paris, 64 p.",
+    "version": "Version 1.0.0",
+    "disclaimer": "Dieses Diagnosetool soll Fachleuten helfen, die Baumvitalität systematisch zu bewerten. Es ersetzt nicht die Feldexpertise oder professionelle Baumkontrolle."
+  },
+  "common": {
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "back": "Zurück",
+    "next": "Weiter",
+    "loading": "Wird geladen...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "confirm": "Bestätigen",
+    "add": "Hinzufügen",
+    "statistics": "Statistiken"
+  },
+  "diagnose": {
+    "title": "Diagnose",
+    "selectSpecies": "Baumart auswählen",
+    "progress": "Fortschritt"
+  },
+  "forms": {
+    "architecturee": "Architekturform",
+    "etetee": "Gestutzte Form",
+    "delaissee": "Vernachlässigte Form",
+    "naturelle": "Natürliche Form",
+    "jeune": "Jungbaum"
+  }
+}

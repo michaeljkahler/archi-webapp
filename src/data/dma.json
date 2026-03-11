@@ -1,0 +1,378 @@
+{
+  "dendromarkers": [
+    {
+      "id": "contour_houppier",
+      "name": {
+        "de": "Kronenkontour",
+        "fr": "Contour du houppier"
+      },
+      "category": "houppier",
+      "guide_page": 12,
+      "illustration_extracted": "dma/guide_p12_0.png",
+      "description": {
+        "de": "Beschreibt die äußere Form der Baumkrone von pyramidal bis aufgelöst. Die Kronenkontour verändert sich mit dem Alter des Baumes und ist ein wichtiger Vitalitätsindikator.",
+        "fr": "Décrit la forme extérieure de la couronne, allant de pyramidale à diffuse. Le contour du houppier change avec l'âge de l'arbre et constitue un indicateur important de vitalité."
+      },
+      "diagnostic_value": {
+        "de": "Pyramidale Form zeigt Jugendvitalität, während abgerundete bis aufgelöste Konturen auf Alterung oder Vitalitätsverlust hindeuten.",
+        "fr": "Une forme pyramidale indique une vitalité juvénile, tandis que les contours arrondis à diffus suggèrent un vieillissement ou une perte de vitalité."
+      }
+    },
+    {
+      "id": "fourches_maitresses",
+      "name": {
+        "de": "Hauptgabel",
+        "fr": "Fourches maîtresses"
+      },
+      "category": "tronc",
+      "guide_page": 13,
+      "illustration_extracted": "dma/guide_p13_0.png",
+      "description": {
+        "de": "Spaltung des Stammes in mehrere Hauptäste. Diese Verdopplung oder Mehrfachung des Stammes ist ein charakteristisches Merkmal der Baumarchitektur und beeinflusst die strukturelle Stabilität.",
+        "fr": "Division du tronc en plusieurs branches maîtresses. Cette duplication ou multiplication du tronc est une caractéristique architecturale importante qui affecte la stabilité structurelle."
+      },
+      "diagnostic_value": {
+        "de": "Frühe Stammgabeln deuten auf genetische oder frühe Beschädigungen hin. Mehrfachgabeln können zu Schwachstellen in der Baumstruktur führen.",
+        "fr": "Les fourches précoces indiquent des dommages génétiques ou précoces. Les fourches multiples peuvent créer des points faibles dans la structure de l'arbre."
+      }
+    },
+    {
+      "id": "branches_verticales",
+      "name": {
+        "de": "Vertikale Gipfeläste",
+        "fr": "Branches verticales du sommet"
+      },
+      "category": "houppier",
+      "guide_page": 14,
+      "illustration_extracted": "dma/guide_p14_0.png",
+      "description": {
+        "de": "Aufrecht stehende Äste in der Kronenkrone, die ein Zeichen des Erwachsenenstadiums sind. Diese vertikalen Strukturen entstehen durch eine Veränderung der Astorientierung mit dem Alter.",
+        "fr": "Branches dressées au sommet de la couronne, signe du stade adulte. Ces structures verticales résultent d'une modification de l'orientation des branches avec l'âge."
+      },
+      "diagnostic_value": {
+        "de": "Das Auftreten vertikaler Gipfeläste deutet auf den Übergang von der juvenilen zur adulten Phase hin und zeigt eine reife Baumarchitektur.",
+        "fr": "L'apparition de branches verticales de sommet indique la transition de la phase juvénile à la phase adulte et montre une architecture arborescente mature."
+      }
+    },
+    {
+      "id": "ramification_normale",
+      "name": {
+        "de": "Normale Verzweigung",
+        "fr": "Ramification normale"
+      },
+      "category": "branches",
+      "guide_page": 15,
+      "illustration_extracted": "dma/guide_p15_0.png",
+      "description": {
+        "de": "Regelmäßige und gut verteilte Verzweigungsmuster, die auf einen gesunden Baum hindeuten. Die Äste sind gleichmäßig über die Krone verteilt und zeigen eine harmonische Struktur.",
+        "fr": "Motif de ramification régulier et bien distribué, indiquant un arbre sain. Les branches sont distribuées uniformément dans la couronne et montrent une structure harmonieuse."
+      },
+      "diagnostic_value": {
+        "de": "Normale Verzweigung zeigt gute Vitalität und optimale Ressourcenvergabe. Dies ist ein positives Zeichen für die allgemeine Gesundheit des Baumes.",
+        "fr": "La ramification normale indique une bonne vitalité et une allocation optimale des ressources. C'est un signe positif pour la santé générale de l'arbre."
+      }
+    },
+    {
+      "id": "ramification_appauvrie",
+      "name": {
+        "de": "Verarmte Verzweigung",
+        "fr": "Ramification appauvrie"
+      },
+      "category": "branches",
+      "guide_page": 16,
+      "illustration_extracted": "dma/guide_p16_0.png",
+      "description": {
+        "de": "Vereinfachtes Verzweigungsmuster mit Lücken in der Kronenstruktur. Der Mangel an feineren Verzweigungen deutet auf einen geschwächten Baum hin, der nicht genügend Triebe produziert.",
+        "fr": "Motif de ramification simplifié avec des lacunes dans la structure de la couronne. Le manque de ramifications fines indique un arbre affaibli qui ne produit pas assez de pousses."
+      },
+      "diagnostic_value": {
+        "de": "Verarmte Verzweigung ist ein klares Zeichen für Vitalitätsverlust und unzureichende Ressourcen. Dies weist auf Stress oder Beschädigungen hin.",
+        "fr": "La ramification appauvrie est un signe clair de perte de vitalité et de ressources insuffisantes. Elle indique un stress ou des dommages."
+      }
+    },
+    {
+      "id": "arcures",
+      "name": {
+        "de": "Bogenverlauf (Astbogeung)",
+        "fr": "Arcures"
+      },
+      "category": "branches",
+      "guide_page": 17,
+      "illustration_extracted": "dma/guide_p17_0.png",
+      "description": {
+        "de": "Durchhängend gekrümmte Äste, die ein Zeichen von Reife oder Seneszenz sind. Diese Verlagerung des Astwinkels nach unten ist eine natürliche Folge des Alterns und der Lastbelastung.",
+        "fr": "Branches arquées et pendantes, signe de maturité ou de sénescence. Cette modification de l'angle de branche vers le bas est une conséquence naturelle du vieillissement et de la charge."
+      },
+      "diagnostic_value": {
+        "de": "Arcures deuten auf den Übergang zur Seneszenz oder Überalterung des Baumes hin. Sie können auch auf Schwachstellen oder beginnendes Versagen hindeuten.",
+        "fr": "Les arcures indiquent une transition vers la sénescence ou le vieillissement excessif de l'arbre. Elles peuvent aussi indiquer des points faibles ou un début de défaillance."
+      }
+    },
+    {
+      "id": "mortalite_anormale",
+      "name": {
+        "de": "Abnormale Mortalität",
+        "fr": "Mortalité anormale"
+      },
+      "category": "houppier",
+      "guide_page": 18,
+      "illustration_extracted": "dma/guide_p18_0.png",
+      "description": {
+        "de": "Unerwarteter oder übermäßiger Blattverlust und Aststerben in der Krone. Diese abnormale Mortalität geht über die erwartete natürliche Seneszenz hinaus und zeigt Stress oder Krankheit.",
+        "fr": "Perte de feuillage inattendue et mort des branches dans la couronne. Cette mortalité anormale dépasse la sénescence naturelle attendue et indique un stress ou une maladie."
+      },
+      "diagnostic_value": {
+        "de": "Abnormale Mortalität ist ein kritisches Zeichen für ernsthafte Vitalitätsprobleme, einschließlich Krankheiten, Schädlingsbefall oder extreme Umweltstress.",
+        "fr": "La mortalité anormale est un signe critique de problèmes de vitalité graves, incluant les maladies, les ravageurs ou le stress environnemental extrême."
+      }
+    },
+    {
+      "id": "chicots",
+      "name": {
+        "de": "Dürrhölzer (Aststrünke)",
+        "fr": "Chicots"
+      },
+      "category": "branches",
+      "guide_page": 19,
+      "illustration_extracted": "dma/guide_p19_0.png",
+      "description": {
+        "de": "Tote Aststummel, die nicht überwalltet sind und aus der Krone herausragen. Diese nekrotischen Strukturen entstehen durch Abbruch oder natürliches Absterben ohne proper Wundverschluss.",
+        "fr": "Chicots ou bois mort qui ne sont pas compartimentalisés et qui dépassent de la couronne. Ces structures nécrotiques résultent de cassures ou de la mort naturelle sans cicatrisation appropriée."
+      },
+      "diagnostic_value": {
+        "de": "Chicots deuten auf mangelnde Wundheilungskapazität und strukturelle Schwäche hin. Sie sind ein Zeichen für eingeschränkte Vitalität und erhöhtes Infektionsrisiko.",
+        "fr": "Les chicots indiquent une capacité de cicatrisation insuffisante et une faiblesse structurelle. C'est un signe de vitalité réduite et d'un risque d'infection accru."
+      }
+    },
+    {
+      "id": "echancrures",
+      "name": {
+        "de": "Kronenlücken (Einschnitte)",
+        "fr": "Échancrures"
+      },
+      "category": "houppier",
+      "guide_page": 20,
+      "illustration_extracted": "dma/guide_p20_0.png",
+      "description": {
+        "de": "Lücken oder Einschnitte in der Kronenkontour, besonders bei Nadelbäumen. Diese Fehlstellen können bis zum Stamm reichen und entstehen durch Aststerben oder Schäden.",
+        "fr": "Lacunes ou encoches dans le contour de la couronne, particulièrement chez les conifères. Ces vides peuvent atteindre le tronc et résultent de la mort des branches ou de dommages."
+      },
+      "diagnostic_value": {
+        "de": "Kronenlücken, die den Stamm erreichen, deuten auf ernsthafte Vitalitätsprobleme hin. Sie beeinträchtigen die aerodynamische Stabilität und das Erscheinungsbild.",
+        "fr": "Les échancrures atteignant le tronc indiquent des problèmes de vitalité graves. Elles compromettent la stabilité aérodynamique et l'esthétique."
+      }
+    },
+    {
+      "id": "deficit_foliaire",
+      "name": {
+        "de": "Blattverlust (Blattdefizit)",
+        "fr": "Déficit foliaire"
+      },
+      "category": "houppier",
+      "guide_page": 21,
+      "illustration_extracted": "dma/guide_p21_0.png",
+      "description": {
+        "de": "Geschätzter Prozentsatz des fehlenden Laubes in der Krone. Das Blattdefizit wird in Prozentklassen gemessen, mit Schwellenwerten bei 25% und 75%, um den Vitalitätsstatus zu klassifizieren.",
+        "fr": "Pourcentage estimé de feuillage manquant dans la couronne. Le déficit foliaire est mesuré en classes de pourcentage, avec des seuils à 25% et 75%, pour classer le statut de vitalité."
+      },
+      "diagnostic_value": {
+        "de": "Ein Blattdefizit über 25% ist ein Zeichen für Vitalitätsverlust. Bei über 75% ist die Vitalität stark beeinträchtigt und der Baum in kritischem Zustand.",
+        "fr": "Un déficit foliaire supérieur à 25% indique une perte de vitalité. Au-delà de 75%, la vitalité est gravement compromise et l'arbre est en état critique."
+      }
+    },
+    {
+      "id": "coloration_anormale",
+      "name": {
+        "de": "Abnormale Verfärbung",
+        "fr": "Coloration anormale"
+      },
+      "category": "houppier",
+      "guide_page": 22,
+      "illustration_extracted": "dma/guide_p22_0.png",
+      "description": {
+        "de": "Ungewöhnliche Färbungen des Laubes wie Gelbfärbung, Rötung oder Verbleichung. Diese Verfärbungen gehen über natürliche saisonale Veränderungen hinaus und deuten auf physiologische Störungen hin.",
+        "fr": "Colorations inhabituelles du feuillage comme le jaunissement, la rougeur ou la décoloration. Ces colorations anormales vont au-delà des changements saisonniers naturels et indiquent des perturbations physiologiques."
+      },
+      "diagnostic_value": {
+        "de": "Abnormale Verfärbungen können auf Nährstoffmangel, Wasserstress, Krankheiten oder Schadstoffbelastung hinweisen. Sie sind Zeichen einer gestörten Physiologie.",
+        "fr": "Les colorations anormales peuvent indiquer une carence nutritionnelle, un stress hydrique, des maladies ou une pollution. Ce sont des signes d'une physiologie perturbée."
+      }
+    },
+    {
+      "id": "microphyllie",
+      "name": {
+        "de": "Mikrophyllie (Kleinblättrigkeit)",
+        "fr": "Microphyllie"
+      },
+      "category": "houppier",
+      "guide_page": 23,
+      "illustration_extracted": "dma/guide_p23_0.png",
+      "description": {
+        "de": "Abnormale Verkleinerung von Blättern oder Nadeln über das normale Maß hinaus. Diese Reduktion der Blattgröße entsteht durch Stress und beeinträchtigt die Photosyntheseleistung.",
+        "fr": "Réduction anormale de la taille des feuilles ou des aiguilles au-delà de la normale. Cette diminution de la taille des feuilles résulte du stress et compromet la performance photosynthétique."
+      },
+      "diagnostic_value": {
+        "de": "Mikrophyllie ist ein Stressindikator, der auf chronische Belastungen wie Trockenheit, Nährstoffmangel oder Erkrankungen hindeutet.",
+        "fr": "La microphyllie est un indicateur de stress indiquant des charges chroniques comme la sécheresse, les carences nutritionnelles ou les maladies."
+      }
+    },
+    {
+      "id": "suppleants_orthotropes",
+      "name": {
+        "de": "Orthotrope Ersatztriebe",
+        "fr": "Suppléants orthotropes"
+      },
+      "category": "houppier",
+      "guide_page": 24,
+      "illustration_extracted": "dma/guide_p24_0.png",
+      "description": {
+        "de": "Vertikal aufwärts gerichtete Ersatztriebe, die aus dem Stamm oder den Hauptästen entstehen. Diese orthotropen Triebe sind die stärksten und widerstandsfähigsten Ersatztriebe und zeigen hohe Reaktivität.",
+        "fr": "Pousses de remplacement dirigées verticalement vers le haut, émergeant du tronc ou des branches principales. Ces pousses orthotropes sont les plus fortes et les plus résilientes et montrent une haute réactivité."
+      },
+      "diagnostic_value": {
+        "de": "Orthotrope Ersatztriebe sind ein positives Zeichen für Vitalität und Regenerationsfähigkeit. Sie deuten auf die stärkste Reaktion des Baumes auf Beschädigungen hin.",
+        "fr": "Les suppléants orthotropes sont un signe positif de vitalité et de capacité de régénération. Ils indiquent la plus forte réaction de l'arbre aux dommages."
+      }
+    },
+    {
+      "id": "suppleants_plagiotropes",
+      "name": {
+        "de": "Plagiotrope Ersatztriebe",
+        "fr": "Suppléants plagiotropes"
+      },
+      "category": "houppier",
+      "guide_page": 25,
+      "illustration_extracted": "dma/guide_p25_0.png",
+      "description": {
+        "de": "Horizontal oder schräg ausgerichtete Ersatztriebe, die eine Schwächung der apikalen Dominanz anzeigen. Diese plagiotropen Triebe entstehen, wenn die Hauptführung ausfällt und zeigen eine moderate Regenerationsfähigkeit.",
+        "fr": "Pousses de remplacement orientées horizontalement ou obliquement, indiquant un affaiblissement de la dominance apicale. Ces pousses plagiotropes émergent en cas de défaillance de la leader et montrent une capacité de régénération modérée."
+      },
+      "diagnostic_value": {
+        "de": "Plagiotrope Ersatztriebe deuten auf eine schwächere Regenerationsreaktion hin als orthotrope Triebe. Sie zeigen immer noch Vitalität, aber mit reduziertem Wachstumspotenzial.",
+        "fr": "Les suppléants plagiotropes indiquent une réaction de régénération plus faible que les pousses orthotropes. Ils montrent toujours de la vitalité, mais avec un potentiel de croissance réduit."
+      }
+    },
+    {
+      "id": "suppleants_ageotropes",
+      "name": {
+        "de": "Ageotrope Ersatztriebe",
+        "fr": "Suppléants agéotropes"
+      },
+      "category": "houppier",
+      "guide_page": 26,
+      "illustration_extracted": "dma/guide_p26_0.png",
+      "description": {
+        "de": "Ersatztriebe ohne Gravitationsorientierung, die in chaotischen Mustern wachsen. Diese ageotropen Triebe entstehen, wenn die Fähigkeit zur Gravitationserkennung verloren geht und zeigen schwache oder abnormale Reaktionen.",
+        "fr": "Pousses de remplacement sans orientation gravitropique, croissant selon des motifs chaotiques. Ces pousses agéotropes émergent quand la capacité de détection de la gravité est perdue et montrent des réactions faibles ou anormales."
+      },
+      "diagnostic_value": {
+        "de": "Ageotrope Ersatztriebe sind ein Zeichen für schwerwiegende Beeinträchtigungen der Baumphysiologie und Regenerationsfähigkeit. Sie deuten auf kritische Vitalitätsprobleme hin.",
+        "fr": "Les suppléants agéotropes sont un signe de défaillances graves de la physiologie arborescente et de la capacité de régénération. Ils indiquent des problèmes de vitalité critiques."
+      }
+    },
+    {
+      "id": "deuxieme_houppier",
+      "name": {
+        "de": "Zweiter Houppier (Ersatzkrone)",
+        "fr": "Deuxième houppier"
+      },
+      "category": "houppier",
+      "guide_page": 27,
+      "illustration_extracted": "dma/guide_p27_0.png",
+      "description": {
+        "de": "Eine neue Krone, die sich aus Ersatztrieben gebildet hat, nachdem die ursprüngliche Krone beschädigt wurde. Diese sekundäre Krone kann eine neue Baumstruktur mit verbesserter oder verschlechterter Architektur bilden.",
+        "fr": "Une nouvelle couronne formée à partir de pousses de remplacement après endommagement de la couronne originale. Cette couronne secondaire peut créer une nouvelle structure arborescente avec une architecture améliorée ou dégradée."
+      },
+      "diagnostic_value": {
+        "de": "Ein zweiter Houppier zeigt, dass der Baum erfolgreich auf Schäden reagiert hat und neu geprägt wurde. Die Qualität dieser neuen Krone hängt von der Art und Qualität der Ersatztriebe ab.",
+        "fr": "Un deuxième houppier montre que l'arbre a réagi avec succès aux dommages et a été restructuré. La qualité de cette nouvelle couronne dépend du type et de la qualité des pousses de remplacement."
+      }
+    },
+    {
+      "id": "racines_internes",
+      "name": {
+        "de": "Interne Wurzeln (Adventivwurzeln)",
+        "fr": "Racines internes"
+      },
+      "category": "tronc",
+      "guide_page": 28,
+      "illustration_extracted": "dma/guide_p28_0.png",
+      "description": {
+        "de": "Adventivwurzeln, die sich innerhalb des Stammes oder in Holz entwickelt haben. Diese internen Wurzeln entstehen als Reaktion auf Stress oder Beschädigungen und stellen eine unkonventionelle Überlebensstrategie dar.",
+        "fr": "Racines adventives qui s'établissent à l'intérieur du tronc ou du bois. Ces racines internes se forment en réaction au stress ou aux dommages et représentent une stratégie de survie non conventionnelle."
+      },
+      "diagnostic_value": {
+        "de": "Interne Wurzeln sind ein Zeichen extremen Stresses und einer abnormalen Reaktion auf Verletzungen. Sie deuten auf ernsthafte Probleme mit dem Wurzelsystem hin.",
+        "fr": "Les racines internes sont un signe de stress extrême et une réaction anormale aux blessures. Elles indiquent des problèmes graves du système racinaire."
+      }
+    },
+    {
+      "id": "fleche",
+      "name": {
+        "de": "Leitschoß (Mitteltrieb)",
+        "fr": "Flèche"
+      },
+      "category": "fleche",
+      "guide_page": 29,
+      "illustration_extracted": "dma/guide_p29_0.png",
+      "description": {
+        "de": "Der Führungstrieb und die oberen 6 Astwirtel bei Nadelbäumen. Die Flèche definiert die apikale Struktur und den Höhentrieb des Baumes und ist fundamental für die pyramidale Form.",
+        "fr": "La flèche et les 6 verticilles de branches supérieurs chez les conifères. La flèche définit la structure apicale et la croissance en hauteur de l'arbre et est fondamentale pour la forme pyramidale."
+      },
+      "diagnostic_value": {
+        "de": "Eine starke, aufrechte Flèche deutet auf hohe Vitalität und optimales Höhenwachstum hin. Eine schwache oder gekrümmte Flèche zeigt Beeinträchtigung der apikalen Dominanz.",
+        "fr": "Une flèche forte et dressée indique une haute vitalité et une croissance en hauteur optimale. Une flèche faible ou courbée montre une altération de la dominance apicale."
+      }
+    },
+    {
+      "id": "axes_dedifferencies",
+      "name": {
+        "de": "Dedifferenzierte Achsen",
+        "fr": "Axes dédifférenciés"
+      },
+      "category": "branches",
+      "guide_page": 30,
+      "illustration_extracted": "dma/guide_p30_0.png",
+      "description": {
+        "de": "Triebe, die ihre spezifische Wuchsform verloren haben und ein anderes oder unregelmäßiges Muster angenommen haben. Diese Dedifferenzierung zeigt eine Störung der genetisch programmierten Architektur.",
+        "fr": "Pousses qui ont perdu leur forme de croissance spécifique et ont adopté un motif différent ou irrégulier. Cette dédifférenciation indique une perturbation de l'architecture génétiquement programmée."
+      },
+      "diagnostic_value": {
+        "de": "Dedifferenzierte Achsen sind ein Zeichen für physiologische Störungen oder genetische Aberrationen. Sie deuten auf eine Störung der normalen Entwicklungsprogramme hin.",
+        "fr": "Les axes dédifférenciés sont un signe de perturbations physiologiques ou d'aberrations génétiques. Ils indiquent une perturbation des programmes de développement normaux."
+      }
+    },
+    {
+      "id": "module_types",
+      "name": {
+        "de": "Modultypen",
+        "fr": "Types de modules"
+      },
+      "category": "arbre_entier",
+      "guide_page": 31,
+      "illustration_extracted": "dma/guide_p31_0.png",
+      "description": {
+        "de": "Klassifikation der Modul-Architekturtypen, insbesondere für Kastanie, Platane und Zeder. Diese Typen (1-4 bzw. 1-5) beschreiben unterschiedliche Wachstumsmuster und Verzweigungscharakteristiken.",
+        "fr": "Classification des types d'architecture modulaire, particulièrement pour le Châtaignier, le Platane et le Cèdre. Ces types (1-4 ou 1-5) décrivent différents motifs de croissance et caractéristiques de ramification."
+      },
+      "diagnostic_value": {
+        "de": "Modultypen helfen bei der Klassifizierung der Baumstruktur und dem Verständnis der artenspezifischen Architekturentwicklung. Sie sind wichtig für die Beurteilung der strukturellen Konformität.",
+        "fr": "Les types de modules aident à classer la structure arborescente et à comprendre le développement architectural spécifique aux espèces. Ils sont importants pour évaluer la conformité structurelle."
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "method": "ARCHI",
+    "authors": "Drénou & CNPF",
+    "language": "de,fr",
+    "total_markers": 20,
+    "categories": [
+      "houppier",
+      "branches",
+      "tronc",
+      "arbre_entier",
+      "fleche"
+    ]
+  }
+}

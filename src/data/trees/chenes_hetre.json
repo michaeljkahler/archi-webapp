@@ -1,0 +1,353 @@
+{
+  "id": "chenes_hetre",
+  "names": {
+    "de": "Eichen & Buche",
+    "fr": "Chênes et Hêtre"
+  },
+  "latin": [
+    "Quercus robur",
+    "Quercus petraea",
+    "Quercus pubescens",
+    "Quercus suber",
+    "Quercus ilex",
+    "Fagus sylvatica"
+  ],
+  "form_types": [
+    "naturelle_libre"
+  ],
+  "applicable_stages": [
+    "adulte",
+    "mature",
+    "senescent"
+  ],
+  "start_node": "n1",
+  "nodes": {
+    "n1": {
+      "question": {
+        "de": "Baum dominant oder co-dominant: lebend?",
+        "fr": "Arbre dominant ou co-dominant : vivant ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [],
+      "yes": "n1b",
+      "no": "M"
+    },
+    "n1b": {
+      "question": {
+        "de": "Ganzer Baum: Interne Wurzeln (racines internes) vorhanden?",
+        "fr": "Arbre entier : présence de racines internes ?"
+      },
+      "zone": {
+        "de": "Stamm / Ganzer Baum",
+        "fr": "Tronc / Arbre entier"
+      },
+      "dma_refs": [
+        "racines_internes"
+      ],
+      "yes": "C",
+      "no": "n2"
+    },
+    "n2": {
+      "question": {
+        "de": "Obere Hälfte des Originalhouppiers (konkurrenzfrei): Raum mit Mortalität/Lücken ≥ 25%?",
+        "fr": "Moitié supérieure du houppier d'origine hors concurrence : part de l'espace occupé par la mortalité et/ou les « vides » liés aux chicots ≥ 25% ?"
+      },
+      "zone": {
+        "de": "Obere Kronenhälfte, konkurrenzfrei",
+        "fr": "Moitié supérieure du houppier hors concurrence"
+      },
+      "dma_refs": [
+        "mortalite_anormale"
+      ],
+      "yes": "n7",
+      "no": "n3"
+    },
+    "n3": {
+      "question": {
+        "de": "Gipfeläste des Originalhouppiers: vertikal und geradlinig?",
+        "fr": "Branches sommitales du houppier d'origine : verticales et rectilignes ?"
+      },
+      "zone": {
+        "de": "Gipfelbereich",
+        "fr": "Branches sommitales"
+      },
+      "dma_refs": [
+        "branches_verticales"
+      ],
+      "note": {
+        "de": "Falls nicht beurteilbar → überspringen",
+        "fr": "Si impossibilité de répondre → passer"
+      },
+      "yes": "n4",
+      "no": "n5",
+      "skip": "n5"
+    },
+    "n4": {
+      "question": {
+        "de": "Gipfeläste: Normale Verzweigung (Toleranz einzelner verarmter)?",
+        "fr": "Branches sommitales : ramification normale (tolérance de quelques ramifications appauvries) ?"
+      },
+      "zone": {
+        "de": "Gipfeläste",
+        "fr": "Branches sommitales"
+      },
+      "dma_refs": [
+        "ramification_normale"
+      ],
+      "yes": "ASa",
+      "no": "n6"
+    },
+    "n5": {
+      "question": {
+        "de": "Gipfeläste: Als abgesunkene Bogen (arcures affaissées) angeordnet?",
+        "fr": "Branches sommitales : agencées en arcures affaissées ?"
+      },
+      "zone": {
+        "de": "Gipfeläste",
+        "fr": "Branches sommitales"
+      },
+      "dma_refs": [
+        "arcures"
+      ],
+      "yes": "Sn",
+      "no": "n6"
+    },
+    "n6": {
+      "question": {
+        "de": "Ganzer Baum: Ersatztriebe (Suppléants) fehlen oder quasi fehlend?",
+        "fr": "Arbre entier : suppléants absents ou quasi absents ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes",
+        "suppleants_plagiotropes"
+      ],
+      "yes": "AS1",
+      "no": "n6b"
+    },
+    "n6b": {
+      "question": {
+        "de": "Raum der Ersatztriebe: >25% plagiotrope und orthotrope mit normaler Verzweigung?",
+        "fr": "Espace des suppléants : composé à plus de 25% de plagiotropes et d'orthotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Ersatztriebe am ganzen Baum",
+        "fr": "Suppléants sur l'arbre entier"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes",
+        "suppleants_plagiotropes",
+        "ramification_normale"
+      ],
+      "yes": "AR1",
+      "no": "AS2"
+    },
+    "n7": {
+      "question": {
+        "de": "Verarmte Verzweigungen: >50% durch orthotrope Ersatztriebe mit normaler Verzweigung abgelöst?",
+        "fr": "Ramifications appauvries : plus de 50% relayées par des suppléants orthotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Verarmte Verzweigungen im Houppier",
+        "fr": "Ramifications appauvries"
+      },
+      "dma_refs": [
+        "ramification_appauvrie",
+        "suppleants_orthotropes"
+      ],
+      "yes": "n7b",
+      "no": "n8"
+    },
+    "n7b": {
+      "question": {
+        "de": "Originalhouppier: >50% des Volumens durch orthotrope Ersatztriebe ersetzt?",
+        "fr": "Houppier d'origine : plus de 50% en cours de remplacement par des suppléants orthotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Gesamter Originalhouppier",
+        "fr": "Houppier d'origine entier"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes"
+      ],
+      "yes": "AR2",
+      "no": "AR1"
+    },
+    "n8": {
+      "question": {
+        "de": "Ganzer Baum: Zweite strukturierte Krone innerhalb oder unterhalb des Originalhouppiers?",
+        "fr": "Arbre entier : formation d'un 2e houppier structuré emboîté dans le houppier d'origine ou inséré en-dessous ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [
+        "deuxieme_houppier"
+      ],
+      "yes": "AD",
+      "no": "n9"
+    },
+    "n9": {
+      "question": {
+        "de": "Unter den absterbenden Zonen: Originaläste mit ≥50% normaler Verzweigung?",
+        "fr": "Sous les zones dépérissantes : branches d'origine ayant au moins 50% de ramification normale ?"
+      },
+      "zone": {
+        "de": "Unterhalb absterbender Zonen",
+        "fr": "Sous les zones dépérissantes"
+      },
+      "dma_refs": [
+        "ramification_normale"
+      ],
+      "yes": "ARp",
+      "no": "n10"
+    },
+    "n10": {
+      "question": {
+        "de": "Ganzer Baum: Interne Wurzeln (racines internes) vorhanden?",
+        "fr": "Arbre entier : présence de racines internes ?"
+      },
+      "zone": {
+        "de": "Stamm / Ganzer Baum",
+        "fr": "Tronc / Arbre entier"
+      },
+      "dma_refs": [
+        "racines_internes"
+      ],
+      "yes": "AI1",
+      "no": "AI2"
+    }
+  },
+  "results": {
+    "M": {
+      "code": "M",
+      "label": {
+        "de": "Tot",
+        "fr": "Mort"
+      },
+      "stage": "dead",
+      "state": "dead",
+      "color": "#1a1a1a"
+    },
+    "ASa": {
+      "code": "ASa",
+      "label": {
+        "de": "Adult — Gesund",
+        "fr": "Adulte — Sain"
+      },
+      "stage": "adulte",
+      "state": "sain",
+      "color": "#4CAF50"
+    },
+    "Sn": {
+      "code": "Sn",
+      "label": {
+        "de": "Seneszent",
+        "fr": "Sénescent"
+      },
+      "stage": "senescent",
+      "state": "sain",
+      "color": "#9E9E9E"
+    },
+    "AS1": {
+      "code": "AS1",
+      "label": {
+        "de": "Adult — Gestresst (1)",
+        "fr": "Adulte — Stressé (1)"
+      },
+      "stage": "adulte",
+      "state": "stresse",
+      "color": "#FFC107"
+    },
+    "AS2": {
+      "code": "AS2",
+      "label": {
+        "de": "Adult — Gestresst (2)",
+        "fr": "Adulte — Stressé (2)"
+      },
+      "stage": "adulte",
+      "state": "stresse",
+      "color": "#FFB300"
+    },
+    "AR1": {
+      "code": "AR1",
+      "label": {
+        "de": "Adult — Resilient (1)",
+        "fr": "Adulte — Résilient (1)"
+      },
+      "stage": "adulte",
+      "state": "resilient",
+      "color": "#2196F3"
+    },
+    "AR2": {
+      "code": "AR2",
+      "label": {
+        "de": "Adult — Resilient (2)",
+        "fr": "Adulte — Résilient (2)"
+      },
+      "stage": "adulte",
+      "state": "resilient",
+      "color": "#1976D2"
+    },
+    "AD": {
+      "code": "AD",
+      "label": {
+        "de": "Adult — Kronenrückzug",
+        "fr": "Adulte — Descente de cime"
+      },
+      "stage": "adulte",
+      "state": "descente_cime",
+      "color": "#FF9800"
+    },
+    "ARp": {
+      "code": "ARp",
+      "label": {
+        "de": "Adult — Repli",
+        "fr": "Adulte — Repli"
+      },
+      "stage": "adulte",
+      "state": "repli",
+      "color": "#9C27B0"
+    },
+    "AI1": {
+      "code": "AI1",
+      "label": {
+        "de": "Adult — Irreversibel (1)",
+        "fr": "Adulte — Irréversible (1)"
+      },
+      "stage": "adulte",
+      "state": "deperissement_irreversible",
+      "color": "#F44336"
+    },
+    "AI2": {
+      "code": "AI2",
+      "label": {
+        "de": "Adult — Irreversibel (2)",
+        "fr": "Adulte — Irréversible (2)"
+      },
+      "stage": "adulte",
+      "state": "deperissement_irreversible",
+      "color": "#D32F2F"
+    },
+    "C": {
+      "code": "C",
+      "label": {
+        "de": "Kolonie",
+        "fr": "Colonie"
+      },
+      "stage": "colonie",
+      "state": "colonie",
+      "color": "#795548"
+    }
+  },
+  "flowchart_images": [
+    "flowcharts/chenes_hetre.png"
+  ]
+}

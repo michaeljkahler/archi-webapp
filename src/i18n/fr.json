@@ -1,0 +1,180 @@
+{
+  "app": {
+    "title": "ARCHI – Évaluer la vitalité des arbres",
+    "subtitle": "Diagnostic de vitalité selon la méthode ARCHI",
+    "footer_citation": "Drénou C., 2023 – Évaluer la vitalité des arbres. Guide d'utilisation de la méthode ARCHI. Éditions CNPF-IDF, Paris, 64 p."
+  },
+  "nav": {
+    "home": "Accueil",
+    "diagnose": "Diagnostic",
+    "sites": "Peuplements",
+    "glossary": "Glossaire",
+    "about": "À propos"
+  },
+  "home": {
+    "title": "Système de diagnostic ARCHI",
+    "subtitle": "Évaluez la vitalité des arbres selon la méthode ARCHI",
+    "start_diagnosis": "Démarrer un diagnostic",
+    "manage_sites": "Gérer les peuplements",
+    "quick_diagnosis": "Diagnostic rapide",
+    "view_glossary": "Consulter le glossaire"
+  },
+  "species": {
+    "select": "Sélectionner une essence",
+    "chenes_hetre": "Chênes et Hêtre",
+    "chataignier": "Châtaignier",
+    "platane": "Platane commun",
+    "douglas": "Douglas",
+    "epicea": "Épicéa commun",
+    "pins": "Pins",
+    "sapin_pectine": "Sapin pectiné",
+    "cedre_atlas": "Cèdre de l'Atlas",
+    "latin": {
+      "chenes_hetre": "Quercus spp. & Fagus sylvatica",
+      "chataignier": "Castanea sativa",
+      "platane": "Platanus acerifolia",
+      "douglas": "Pseudotsuga menziesii",
+      "epicea": "Picea abies",
+      "pins": "Pinus spp.",
+      "sapin_pectine": "Abies alba",
+      "cedre_atlas": "Cedrus atlantica"
+    }
+  },
+  "diagnosis": {
+    "question": "Question",
+    "of": "sur",
+    "yes": "Oui",
+    "no": "Non",
+    "skip": "Sauter",
+    "back": "Retour",
+    "restart": "Recommencer",
+    "help": "Aide",
+    "result": "Résultat",
+    "save": "Enregistrer",
+    "next_tree": "Arbre suivant",
+    "show_flowchart": "Afficher la clé de détermination",
+    "progress": "Progression",
+    "decision_path": "Chemin décisionnel",
+    "cannot_determine": "Ne peut pas être déterminé"
+  },
+  "states": {
+    "sain": "Sain",
+    "stresse": "Stressé",
+    "resilient": "Résilient",
+    "descente_cime": "Descente de cime",
+    "repli": "Repli",
+    "deperissement_irreversible": "Dépérissement irréversible",
+    "mort": "Mort",
+    "senescent": "Sénescent",
+    "colonie": "Colonie"
+  },
+  "stages": {
+    "jeune": "Arbre jeune",
+    "adulte": "Arbre adulte",
+    "mature": "Arbre mature",
+    "senescent": "Arbre sénescent"
+  },
+  "site": {
+    "title": "Peuplement",
+    "new": "Nouveau peuplement",
+    "list": "Liste des peuplements",
+    "name": "Nom du peuplement",
+    "observer": "Observateur",
+    "date": "Date",
+    "forest_type": "Type de forêt",
+    "region": "Région",
+    "notes": "Notes",
+    "capture_gps": "Capturer GPS",
+    "accuracy": "Précision",
+    "tree_count": "Nombre d'arbres",
+    "summary": "Résumé",
+    "no_sites": "Aucun peuplement",
+    "delete_confirm": "Supprimer ce peuplement ?",
+    "edit": "Modifier le peuplement"
+  },
+  "sites": {
+    "title": "Peuplements",
+    "newSite": "Nouveau peuplement",
+    "noSites": "Aucun peuplement",
+    "addFirst": "Créer un premier peuplement",
+    "confirmDelete": "Supprimer ce peuplement ?",
+    "location": "Emplacement",
+    "date": "Date",
+    "observer": "Observateur",
+    "name": "Nom du peuplement",
+    "addTree": "Ajouter un arbre"
+  },
+  "tree": {
+    "title": "Arbre",
+    "number": "Numéro d'arbre",
+    "dbh": "DHP (cm)",
+    "position": "Position du houppier",
+    "dominant": "Dominant",
+    "codominant": "Codominant",
+    "suppressed": "Suppléant",
+    "photo_ref": "Photo de référence",
+    "notes": "Notes",
+    "capture_gps": "Capturer GPS",
+    "quick_diagnosis": "Diagnostic rapide",
+    "no_trees": "Aucun arbre"
+  },
+  "trees": {
+    "title": "Arbres",
+    "noTrees": "Aucun arbre",
+    "species": "Essence",
+    "dbh": "DHP (cm)",
+    "height": "Hauteur (m)",
+    "notes": "Notes"
+  },
+  "export": {
+    "csv": "Exporter en CSV",
+    "pdf": "Exporter en PDF",
+    "export_title": "Exporter les résultats"
+  },
+  "glossary": {
+    "title": "Glossaire",
+    "search": "Rechercher dans le glossaire",
+    "category": "Catégorie",
+    "description": "Description",
+    "guide_page": "Page du guide",
+    "all_categories": "Toutes les catégories",
+    "noResults": "Aucun résultat trouvé"
+  },
+  "about": {
+    "title": "À propos de cette application",
+    "method_description": "La méthode ARCHI est une procédure de diagnostic structurée pour évaluer la vitalité des arbres basée sur les caractéristiques visuelles et les indicateurs de stress et de vitalité.",
+    "methodology": "La méthode ARCHI",
+    "description": "La méthode ARCHI est une procédure de diagnostic structurée pour évaluer la vitalité des arbres basée sur les caractéristiques visuelles et les indicateurs de stress et de vitalité.",
+    "methodologyText": "Par l'observation systématique des dendromarqueurs (DMA) tels que la forme de la couronne, la perte foliaire, les dommages au tronc et les signes de régénération, l'état de vitalité d'un arbre peut être évalué de manière fiable.",
+    "citation": "Référence",
+    "citationText": "Drénou C., 2023 – Évaluer la vitalité des arbres. Guide d'utilisation de la méthode ARCHI. Éditions CNPF-IDF, Paris, 64 p.",
+    "version": "Version 1.0.0",
+    "disclaimer": "Cet outil de diagnostic est destiné à aider les professionnels à évaluer systématiquement la vitalité des arbres. Il ne remplace pas l'expertise terrain ou un contrôle phytosanitaire professionnel."
+  },
+  "common": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "back": "Retour",
+    "next": "Suivant",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "confirm": "Confirmer",
+    "add": "Ajouter",
+    "statistics": "Statistiques"
+  },
+  "diagnose": {
+    "title": "Diagnostic",
+    "selectSpecies": "Sélectionner une essence",
+    "progress": "Progression"
+  },
+  "forms": {
+    "architecturee": "Forme architecturée",
+    "etetee": "Forme étêtée",
+    "delaissee": "Forme délaissée",
+    "naturelle": "Forme naturelle",
+    "jeune": "Arbre jeune"
+  }
+}

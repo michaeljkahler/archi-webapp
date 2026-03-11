@@ -1,0 +1,357 @@
+{
+  "id": "sapin_pectine",
+  "names": {
+    "de": "Weisstanne",
+    "fr": "Sapin pectiné"
+  },
+  "latin": [
+    "Abies alba"
+  ],
+  "form_types": [
+    "naturelle_libre"
+  ],
+  "applicable_stages": [
+    "adulte",
+    "mature",
+    "senescent"
+  ],
+  "start_node": "n1",
+  "nodes": {
+    "n1": {
+      "question": {
+        "de": "Baum dominant oder co-dominant: lebend?",
+        "fr": "Arbre dominant ou co-dominant : vivant ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [],
+      "yes": "n2",
+      "no": "M"
+    },
+    "n2": {
+      "question": {
+        "de": "Benadlung der konkurrenzfreien Äste unter der Wipfelspitze: Verdeckt quasi den gesamten Stamm?",
+        "fr": "Feuillage des branches hors concurrence sous la flèche : cache la quasi-totalité du tronc ?"
+      },
+      "zone": {
+        "de": "Äste unter der Wipfelspitze",
+        "fr": "Branches hors concurrence sous la flèche"
+      },
+      "dma_refs": [
+        "feuillage"
+      ],
+      "yes": "n2b",
+      "no": "n3"
+    },
+    "n2b": {
+      "question": {
+        "de": "Äste und Stamm (konkurrenzfrei): Haben Ersatztriebe (orthotrope oder plagiotrope) mit normaler Verzweigung?",
+        "fr": "Branches et tronc hors concurrence : ont des suppléants orthotropes ou plagiotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Äste und Stamm",
+        "fr": "Branches et tronc hors concurrence"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes",
+        "suppleants_plagiotropes"
+      ],
+      "yes": "n2c",
+      "no": "ASa"
+    },
+    "n2c": {
+      "question": {
+        "de": "Sind sie zahlreich (>25%)?",
+        "fr": "Nombreux ?"
+      },
+      "zone": {
+        "de": "Ersatztriebe",
+        "fr": "Suppléants"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes",
+        "suppleants_plagiotropes"
+      ],
+      "yes": "AS1",
+      "no": "AS2"
+    },
+    "n3": {
+      "question": {
+        "de": "Houppier (konkurrenzfrei): Abnorme Mortalität und/oder Verfärbung des Benadlung?",
+        "fr": "Houppier hors concurrence : mortalité anormale et/ou du feuillage à coloration anormale ?"
+      },
+      "zone": {
+        "de": "Houppier konkurrenzfrei",
+        "fr": "Houppier hors concurrence"
+      },
+      "dma_refs": [
+        "mortalite_anormale"
+      ],
+      "yes": "n4",
+      "no": "n5"
+    },
+    "n4": {
+      "question": {
+        "de": "Houppier: Mindestens ein Ast vollständig abgestorben?",
+        "fr": "Houppier hors concurrence : au moins une branche entièrement morte ?"
+      },
+      "zone": {
+        "de": "Houppier konkurrenzfrei",
+        "fr": "Houppier hors concurrence"
+      },
+      "dma_refs": [
+        "mortalite_anormale"
+      ],
+      "yes": "n4b",
+      "no": "n4a"
+    },
+    "n4a": {
+      "question": {
+        "de": "Benadlung der konkurrenzfreien Äste: Verdeckt quasi den gesamten Stamm?",
+        "fr": "Feuillage des branches hors concurrence sous la flèche : cache la quasi-totalité du tronc ?"
+      },
+      "zone": {
+        "de": "Äste unter der Wipfelspitze",
+        "fr": "Branches hors concurrence"
+      },
+      "dma_refs": [
+        "feuillage"
+      ],
+      "yes": "n4a2",
+      "no": "n4a3"
+    },
+    "n4a2": {
+      "question": {
+        "de": "Äste und Stamm: Haben Ersatztriebe mit normaler Verzweigung?",
+        "fr": "Branches et tronc : ont des suppléants à ramification normale ?"
+      },
+      "zone": {
+        "de": "Äste und Stamm",
+        "fr": "Branches et tronc"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes",
+        "suppleants_plagiotropes"
+      ],
+      "yes": "n4a2b",
+      "no": "AS3"
+    },
+    "n4a2b": {
+      "question": {
+        "de": "Sind sie zahlreich (>25%)?",
+        "fr": "Nombreux ?"
+      },
+      "zone": {
+        "de": "Ersatztriebe",
+        "fr": "Suppléants"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes",
+        "suppleants_plagiotropes"
+      ],
+      "yes": "AR",
+      "no": "AS3"
+    },
+    "n4a3": {
+      "question": {
+        "de": "Gibt es Ersatztriebe unter dem konkurrenzfreien Houppier?",
+        "fr": "Y en a-t-il sous le houppier hors concurrence ?"
+      },
+      "zone": {
+        "de": "Unter dem Houppier",
+        "fr": "Sous le houppier hors concurrence"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes",
+        "suppleants_plagiotropes"
+      ],
+      "yes": "n4a3b",
+      "no": "AS4"
+    },
+    "n4a3b": {
+      "question": {
+        "de": "Sind sie zahlreich?",
+        "fr": "Nombreux ?"
+      },
+      "zone": {
+        "de": "Ersatztriebe unter dem Houppier",
+        "fr": "Suppléants sous le houppier"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes",
+        "suppleants_plagiotropes"
+      ],
+      "yes": "AR",
+      "no": "AS4"
+    },
+    "n4b": {
+      "question": {
+        "de": "Ganzer Baum: Zweite strukturierte Krone innerhalb oder unterhalb des Originalhouppiers?",
+        "fr": "Arbre entier : formation d'un 2e houppier structuré emboîté dans le houppier d'origine ou inséré en-dessous ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [
+        "deuxieme_houppier"
+      ],
+      "yes": "AD",
+      "no": "n4c"
+    },
+    "n4c": {
+      "question": {
+        "de": "Ganzer Baum: Ersatztriebe oder Achsen mit normaler Verzweigung?",
+        "fr": "Arbre entier : présence de suppléants orthotropes ou plagiotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes",
+        "suppleants_plagiotropes"
+      ],
+      "yes": "AI1",
+      "no": "AI2"
+    },
+    "n5": {
+      "question": {
+        "de": "Ganzer Baum: Zweite strukturierte Krone innerhalb oder unterhalb des Originalhouppiers?",
+        "fr": "Arbre entier : formation d'un 2e houppier structuré emboîté dans le houppier d'origine ou inséré en-dessous ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [
+        "deuxieme_houppier"
+      ],
+      "yes": "AD",
+      "no": "n5b"
+    },
+    "n5b": {
+      "question": {
+        "de": "Ganzer Baum: Ersatztriebe oder Achsen mit normaler Verzweigung?",
+        "fr": "Arbre entier : présence de suppléants orthotropes ou plagiotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes",
+        "suppleants_plagiotropes"
+      ],
+      "yes": "AI1",
+      "no": "AI2"
+    }
+  },
+  "results": {
+    "M": {
+      "code": "M",
+      "label": {
+        "de": "Tot",
+        "fr": "Mort"
+      },
+      "stage": "dead",
+      "state": "dead",
+      "color": "#1a1a1a"
+    },
+    "ASa": {
+      "code": "ASa",
+      "label": {
+        "de": "Adult — Gesund",
+        "fr": "Adulte — Sain"
+      },
+      "stage": "adulte",
+      "state": "sain",
+      "color": "#4CAF50"
+    },
+    "AS1": {
+      "code": "AS1",
+      "label": {
+        "de": "Adult — Gestresst (1)",
+        "fr": "Adulte — Stressé (1)"
+      },
+      "stage": "adulte",
+      "state": "stresse",
+      "color": "#FFC107"
+    },
+    "AS2": {
+      "code": "AS2",
+      "label": {
+        "de": "Adult — Gestresst (2)",
+        "fr": "Adulte — Stressé (2)"
+      },
+      "stage": "adulte",
+      "state": "stresse",
+      "color": "#FFB300"
+    },
+    "AS3": {
+      "code": "AS3",
+      "label": {
+        "de": "Adult — Gestresst (3)",
+        "fr": "Adulte — Stressé (3)"
+      },
+      "stage": "adulte",
+      "state": "stresse",
+      "color": "#FFA500"
+    },
+    "AS4": {
+      "code": "AS4",
+      "label": {
+        "de": "Adult — Gestresst (4)",
+        "fr": "Adulte — Stressé (4)"
+      },
+      "stage": "adulte",
+      "state": "stresse",
+      "color": "#FF9800"
+    },
+    "AR": {
+      "code": "AR",
+      "label": {
+        "de": "Adult — Resilient",
+        "fr": "Adulte — Résilient"
+      },
+      "stage": "adulte",
+      "state": "resilient",
+      "color": "#2196F3"
+    },
+    "AD": {
+      "code": "AD",
+      "label": {
+        "de": "Adult — Kronenrückzug",
+        "fr": "Adulte — Descente de cime"
+      },
+      "stage": "adulte",
+      "state": "descente_cime",
+      "color": "#FF9800"
+    },
+    "AI1": {
+      "code": "AI1",
+      "label": {
+        "de": "Adult — Irreversibel (1)",
+        "fr": "Adulte — Irréversible (1)"
+      },
+      "stage": "adulte",
+      "state": "deperissement_irreversible",
+      "color": "#F44336"
+    },
+    "AI2": {
+      "code": "AI2",
+      "label": {
+        "de": "Adult — Irreversibel (2)",
+        "fr": "Adulte — Irréversible (2)"
+      },
+      "stage": "adulte",
+      "state": "deperissement_irreversible",
+      "color": "#D32F2F"
+    }
+  },
+  "flowchart_images": [
+    "flowcharts/sapin_pectine.png"
+  ]
+}

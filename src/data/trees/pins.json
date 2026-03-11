@@ -1,0 +1,452 @@
+{
+  "id": "pins",
+  "names": {
+    "de": "Kiefern",
+    "fr": "Pins"
+  },
+  "latin": [
+    "Pinus pinaster",
+    "Pinus sylvestris",
+    "Pinus nigra",
+    "Pinus uncinata"
+  ],
+  "form_types": [
+    "naturelle_libre"
+  ],
+  "applicable_stages": [
+    "jeune",
+    "adulte",
+    "mature",
+    "senescent"
+  ],
+  "start_node": "n1",
+  "nodes": {
+    "n1": {
+      "question": {
+        "de": "Baum dominant oder co-dominant: lebend?",
+        "fr": "Arbre dominant ou co-dominant : vivant ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [],
+      "yes": "n2",
+      "no": "M"
+    },
+    "n2": {
+      "question": {
+        "de": "Kronenkontur des Originalhouppiers: Pyramidal?",
+        "fr": "Contour du houppier d'origine: pyramidal ?"
+      },
+      "zone": {
+        "de": "Kronenkontur",
+        "fr": "Contour du houppier"
+      },
+      "dma_refs": [
+        "contour_houppier"
+      ],
+      "note": {
+        "de": "Falls nicht beurteilbar → zu Frage '#' gehen",
+        "fr": "Si impossibilité de répondre → aller à la question notée #"
+      },
+      "yes": "n3",
+      "no": "n_adulte_1",
+      "skip": "n_adulte_1"
+    },
+    "n3": {
+      "question": {
+        "de": "Houppier (konkurrenzfrei): Normale Verzweigung?",
+        "fr": "Houppier hors concurrence : ramification normale ?"
+      },
+      "zone": {
+        "de": "Houppier konkurrenzfrei",
+        "fr": "Houppier hors concurrence"
+      },
+      "dma_refs": [
+        "ramification_normale"
+      ],
+      "yes": "n4",
+      "no": "n5"
+    },
+    "n4": {
+      "question": {
+        "de": "Wipfelspitze (Flèche): Klare Apikaldominanz?",
+        "fr": "Flèche : nette dominance apicale ?"
+      },
+      "zone": {
+        "de": "Wipfelspitze",
+        "fr": "Flèche"
+      },
+      "dma_refs": [
+        "fleche"
+      ],
+      "yes": "JSa",
+      "no": "n6"
+    },
+    "n5": {
+      "question": {
+        "de": "Wipfelspitze: Durch Achsen mit normaler Verzweigung relayiert?",
+        "fr": "Sommet de l'arbre : relayé par 1 ou des axes dédifférenciés à ramification normale ?"
+      },
+      "zone": {
+        "de": "Wipfelspitze",
+        "fr": "Sommet de l'arbre"
+      },
+      "dma_refs": [
+        "axes_dedifferencies"
+      ],
+      "yes": "JR",
+      "no": "n6"
+    },
+    "n6": {
+      "question": {
+        "de": "Houppier (konkurrenzfrei): Raum mit Mortalität und/oder Lücken ≥25%?",
+        "fr": "Houppier hors concurrence : part de l'espace occupé par la mortalité et les « vides » liés aux chicots ≥ 25% ?"
+      },
+      "zone": {
+        "de": "Houppier konkurrenzfrei",
+        "fr": "Houppier hors concurrence"
+      },
+      "dma_refs": [
+        "mortalite_anormale"
+      ],
+      "yes": "n7",
+      "no": "n8"
+    },
+    "n7": {
+      "question": {
+        "de": "Houppier: Originaläste mit mindestens 50% normaler Verzweigung?",
+        "fr": "Houppier entier : présence de branches d'origine ayant au moins 50% de ramification normale ?"
+      },
+      "zone": {
+        "de": "Ganzer Houppier",
+        "fr": "Houppier entier"
+      },
+      "dma_refs": [
+        "ramification_normale"
+      ],
+      "yes": "JS1",
+      "no": "n7b"
+    },
+    "n7b": {
+      "question": {
+        "de": "Unter der toten Zone: Raum mit Mortalität und/oder Lücken ≥25%?",
+        "fr": "Sous la zone morte : part de l'espace occupé par la mortalité et les « vides » liés aux chicots ≥ 25% ?"
+      },
+      "zone": {
+        "de": "Unter der toten Zone",
+        "fr": "Sous la zone morte"
+      },
+      "dma_refs": [
+        "mortalite_anormale"
+      ],
+      "yes": "JI1",
+      "no": "JS3"
+    },
+    "n8": {
+      "question": {
+        "de": "Houppier: Raum mit Mortalität und/oder Lücken ≥75%?",
+        "fr": "Houppier entier : part de l'espace occupé par la mortalité et les « vides » liés aux chicots ≥ 75% ?"
+      },
+      "zone": {
+        "de": "Ganzer Houppier",
+        "fr": "Houppier entier"
+      },
+      "dma_refs": [
+        "mortalite_anormale"
+      ],
+      "yes": "n8b",
+      "no": "JS2"
+    },
+    "n8b": {
+      "question": {
+        "de": "Gipfeläste: Bilden ein abgeflachtes Plateau aus fadenlosen Achsen (Ficelles)?",
+        "fr": "Branches sommitales : forment un plateau aplani fait d'axes en ficelles ?"
+      },
+      "zone": {
+        "de": "Gipfeläste",
+        "fr": "Branches sommitales"
+      },
+      "dma_refs": [
+        "plateau"
+      ],
+      "yes": "JI2",
+      "no": "JS4"
+    },
+    "n_adulte_1": {
+      "question": {
+        "de": "Stammspitze (apex): Tot, gebrochen oder gekürzt?",
+        "fr": "Sommet de l'arbre : mort et/ou cassé/coupé ?"
+      },
+      "zone": {
+        "de": "Stammspitze",
+        "fr": "Sommet de l'arbre"
+      },
+      "dma_refs": [],
+      "yes": "n_adulte_1b",
+      "no": "n_adulte_2"
+    },
+    "n_adulte_1b": {
+      "question": {
+        "de": "Stammspitze: Durch Achsen mit normaler Verzweigung relayiert?",
+        "fr": "Sommet de l'arbre : relayé par 1 ou des axes dédifférenciés à ramification normale ?"
+      },
+      "zone": {
+        "de": "Stammspitze",
+        "fr": "Sommet de l'arbre"
+      },
+      "dma_refs": [
+        "axes_dedifferencies"
+      ],
+      "yes": "JRp",
+      "no": "n_adulte_7"
+    },
+    "n_adulte_2": {
+      "question": {
+        "de": "Houppier (konkurrenzfrei): Normale Verzweigung?",
+        "fr": "Houppier hors concurrence : ramification normale ?"
+      },
+      "zone": {
+        "de": "Houppier konkurrenzfrei",
+        "fr": "Houppier hors concurrence"
+      },
+      "dma_refs": [
+        "ramification_normale"
+      ],
+      "yes": "n_adulte_3",
+      "no": "n_adulte_4"
+    },
+    "n_adulte_3": {
+      "question": {
+        "de": "Houppier: Raum mit Mortalität und/oder Lücken ≥25%?",
+        "fr": "Houppier hors concurrence : part de l'espace occupé par la mortalité et les « vides » liés aux chicots ≥ 25% ?"
+      },
+      "zone": {
+        "de": "Houppier konkurrenzfrei",
+        "fr": "Houppier hors concurrence"
+      },
+      "dma_refs": [
+        "mortalite_anormale"
+      ],
+      "yes": "n_adulte_7",
+      "no": "ASa"
+    },
+    "n_adulte_4": {
+      "question": {
+        "de": "Houppier: Raum mit Mortalität und/oder Lücken ≥25%?",
+        "fr": "Houppier hors concurrence : part de l'espace occupé par la mortalité et les « vides » liés aux chicots ≥ 25% ?"
+      },
+      "zone": {
+        "de": "Houppier konkurrenzfrei",
+        "fr": "Houppier hors concurrence"
+      },
+      "dma_refs": [
+        "mortalite_anormale"
+      ],
+      "yes": "n_adulte_5",
+      "no": "n_adulte_6"
+    },
+    "n_adulte_5": {
+      "question": {
+        "de": "Houppier: Raum mit Mortalität und/oder Lücken ≥75%?",
+        "fr": "Houppier entier : part de l'espace occupé par la mortalité et les « vides » liés aux chicots ≥ 75% ?"
+      },
+      "zone": {
+        "de": "Ganzer Houppier",
+        "fr": "Houppier entier"
+      },
+      "dma_refs": [
+        "mortalite_anormale"
+      ],
+      "yes": "AI2",
+      "no": "AI1"
+    },
+    "n_adulte_6": {
+      "question": {
+        "de": "Houppier: Originaläste mit mindestens 50% normaler Verzweigung?",
+        "fr": "Houppier entier : présence de branches d'origine ayant au moins 50% de ramification normale ?"
+      },
+      "zone": {
+        "de": "Ganzer Houppier",
+        "fr": "Houppier entier"
+      },
+      "dma_refs": [
+        "ramification_normale"
+      ],
+      "yes": "AS1",
+      "no": "n_adulte_7"
+    },
+    "n_adulte_7": {
+      "question": {
+        "de": "Houppier: Raum mit Mortalität und/oder Lücken ≥75%?",
+        "fr": "Houppier entier : part de l'espace occupé par la mortalité et les « vides » liés aux chicots ≥ 75% ?"
+      },
+      "zone": {
+        "de": "Ganzer Houppier",
+        "fr": "Houppier entier"
+      },
+      "dma_refs": [
+        "mortalite_anormale"
+      ],
+      "yes": "AI2",
+      "no": "AI1"
+    }
+  },
+  "results": {
+    "M": {
+      "code": "M",
+      "label": {
+        "de": "Tot",
+        "fr": "Mort"
+      },
+      "stage": "dead",
+      "state": "dead",
+      "color": "#1a1a1a"
+    },
+    "JSa": {
+      "code": "JSa",
+      "label": {
+        "de": "Jung — Gesund",
+        "fr": "Jeune — Sain"
+      },
+      "stage": "jeune",
+      "state": "sain",
+      "color": "#4CAF50"
+    },
+    "JS1": {
+      "code": "JS1",
+      "label": {
+        "de": "Jung — Gestresst (1)",
+        "fr": "Jeune — Stressé (1)"
+      },
+      "stage": "jeune",
+      "state": "stresse",
+      "color": "#FFC107"
+    },
+    "JS2": {
+      "code": "JS2",
+      "label": {
+        "de": "Jung — Gestresst (2)",
+        "fr": "Jeune — Stressé (2)"
+      },
+      "stage": "jeune",
+      "state": "stresse",
+      "color": "#FFB300"
+    },
+    "JS3": {
+      "code": "JS3",
+      "label": {
+        "de": "Jung — Gestresst (3)",
+        "fr": "Jeune — Stressé (3)"
+      },
+      "stage": "jeune",
+      "state": "stresse",
+      "color": "#FFA500"
+    },
+    "JS4": {
+      "code": "JS4",
+      "label": {
+        "de": "Jung — Gestresst (4)",
+        "fr": "Jeune — Stressé (4)"
+      },
+      "stage": "jeune",
+      "state": "stresse",
+      "color": "#FF9800"
+    },
+    "JS5": {
+      "code": "JS5",
+      "label": {
+        "de": "Jung — Gestresst (5)",
+        "fr": "Jeune — Stressé (5)"
+      },
+      "stage": "jeune",
+      "state": "stresse",
+      "color": "#FF8F00"
+    },
+    "JR": {
+      "code": "JR",
+      "label": {
+        "de": "Jung — Resilient",
+        "fr": "Jeune — Résilient"
+      },
+      "stage": "jeune",
+      "state": "resilient",
+      "color": "#2196F3"
+    },
+    "JRp": {
+      "code": "JRp",
+      "label": {
+        "de": "Jung — Repli",
+        "fr": "Jeune — Repli"
+      },
+      "stage": "jeune",
+      "state": "repli",
+      "color": "#9C27B0"
+    },
+    "JI1": {
+      "code": "JI1",
+      "label": {
+        "de": "Jung — Irreversibel (1)",
+        "fr": "Jeune — Irréversible (1)"
+      },
+      "stage": "jeune",
+      "state": "deperissement_irreversible",
+      "color": "#F44336"
+    },
+    "JI2": {
+      "code": "JI2",
+      "label": {
+        "de": "Jung — Irreversibel (2)",
+        "fr": "Jeune — Irréversible (2)"
+      },
+      "stage": "jeune",
+      "state": "deperissement_irreversible",
+      "color": "#D32F2F"
+    },
+    "ASa": {
+      "code": "ASa",
+      "label": {
+        "de": "Adult — Gesund",
+        "fr": "Adulte — Sain"
+      },
+      "stage": "adulte",
+      "state": "sain",
+      "color": "#4CAF50"
+    },
+    "AS1": {
+      "code": "AS1",
+      "label": {
+        "de": "Adult — Gestresst (1)",
+        "fr": "Adulte — Stressé (1)"
+      },
+      "stage": "adulte",
+      "state": "stresse",
+      "color": "#FFC107"
+    },
+    "AI1": {
+      "code": "AI1",
+      "label": {
+        "de": "Adult — Irreversibel (1)",
+        "fr": "Adulte — Irréversible (1)"
+      },
+      "stage": "adulte",
+      "state": "deperissement_irreversible",
+      "color": "#F44336"
+    },
+    "AI2": {
+      "code": "AI2",
+      "label": {
+        "de": "Adult — Irreversibel (2)",
+        "fr": "Adulte — Irréversible (2)"
+      },
+      "stage": "adulte",
+      "state": "deperissement_irreversible",
+      "color": "#D32F2F"
+    }
+  },
+  "flowchart_images": [
+    "flowcharts/pins_p1.png",
+    "flowcharts/pins_p2.png"
+  ]
+}

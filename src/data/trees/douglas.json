@@ -1,0 +1,315 @@
+{
+  "id": "douglas",
+  "names": {
+    "de": "Douglasie",
+    "fr": "Douglas"
+  },
+  "latin": [
+    "Pseudotsuga menziesii"
+  ],
+  "form_types": [
+    "naturelle_libre"
+  ],
+  "applicable_stages": [
+    "adulte",
+    "mature",
+    "senescent"
+  ],
+  "start_node": "n1",
+  "nodes": {
+    "n1": {
+      "question": {
+        "de": "Baum dominant oder co-dominant: lebend?",
+        "fr": "Arbre dominant ou co-dominant : vivant ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [],
+      "yes": "n2",
+      "no": "M"
+    },
+    "n2": {
+      "question": {
+        "de": "Originalhouppier (konkurrenzfrei): Abnorme Mortalität und/oder Lücken/Aststummel und/oder Verfärbung und/oder Mikrophyllie?",
+        "fr": "Houppier d'origine hors concurrence : mortalité anormale et/ou « vides » liés à des chicots et/ou feuillage à coloration anormale et/ou microphyllie ?"
+      },
+      "zone": {
+        "de": "Originalhouppier konkurrenzfrei",
+        "fr": "Houppier d'origine hors concurrence"
+      },
+      "dma_refs": [
+        "mortalite_anormale"
+      ],
+      "yes": "n4",
+      "no": "n3"
+    },
+    "n3": {
+      "question": {
+        "de": "Benadlung der konkurrenzfreien Äste unter der Wipfelspitze: Verdeckt quasi den gesamten Stamm?",
+        "fr": "Feuillage des branches hors concurrence sous la flèche : cache la quasi-totalité du tronc ?"
+      },
+      "zone": {
+        "de": "Äste unter der Wipfelspitze",
+        "fr": "Branches hors concurrence sous la flèche"
+      },
+      "dma_refs": [
+        "feuillage"
+      ],
+      "yes": "n3b",
+      "no": "n4"
+    },
+    "n3b": {
+      "question": {
+        "de": "Äste und Stamm (konkurrenzfrei): Haben plagiotrope Ersatztriebe mit normaler Verzweigung?",
+        "fr": "Branches et tronc hors concurrence : ont des suppléants plagiotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Äste und Stamm",
+        "fr": "Branches et tronc hors concurrence"
+      },
+      "dma_refs": [
+        "suppleants_plagiotropes"
+      ],
+      "yes": "n3c",
+      "no": "ASa"
+    },
+    "n3c": {
+      "question": {
+        "de": "Sind sie zahlreich (>25%)?",
+        "fr": "Nombreux ?"
+      },
+      "zone": {
+        "de": "Ersatztriebe",
+        "fr": "Suppléants plagiotropes"
+      },
+      "dma_refs": [
+        "suppleants_plagiotropes"
+      ],
+      "yes": "AR1",
+      "no": "AR2"
+    },
+    "n4": {
+      "question": {
+        "de": "Wipfelspitze (Flèche): tot, gebrochen, defeuilliert >75% oder Verfärbung?",
+        "fr": "Flèche : morte et/ou cassée/coupée, ou défeuillée à plus de 75% ou à feuillage à coloration anormale ?"
+      },
+      "zone": {
+        "de": "Wipfelspitze",
+        "fr": "Flèche"
+      },
+      "dma_refs": [
+        "fleche"
+      ],
+      "yes": "n5",
+      "no": "n4b"
+    },
+    "n4b": {
+      "question": {
+        "de": "Houppier: Blatt-/Nadeldefizit ≥75%?",
+        "fr": "Houppier entier : déficit foliaire ≥ 75% ?"
+      },
+      "zone": {
+        "de": "Ganzer Houppier",
+        "fr": "Houppier entier"
+      },
+      "dma_refs": [
+        "deficit_foliaire"
+      ],
+      "yes": "AS2",
+      "no": "AS1"
+    },
+    "n5": {
+      "question": {
+        "de": "Wipfelspitze: Durch orthotrope Ersatztriebe mit normaler Verzweigung relayiert?",
+        "fr": "Flèche : relayée par 1 ou des suppléants orthotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Wipfelspitze",
+        "fr": "Flèche"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes"
+      ],
+      "yes": "n5b",
+      "no": "n6"
+    },
+    "n5b": {
+      "question": {
+        "de": "Houppier: Blatt-/Nadeldefizit ≥75%?",
+        "fr": "Houppier entier : déficit foliaire ≥ 75% ?"
+      },
+      "zone": {
+        "de": "Ganzer Houppier",
+        "fr": "Houppier entier"
+      },
+      "dma_refs": [
+        "deficit_foliaire"
+      ],
+      "yes": "AS4",
+      "no": "AS3"
+    },
+    "n6": {
+      "question": {
+        "de": "Ganzer Baum: Zweite strukturierte Krone innerhalb oder unterhalb des Originalhouppiers?",
+        "fr": "Arbre entier : formation d'un 2e houppier structuré emboîté dans le houppier d'origine ou inséré en-dessous ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [
+        "deuxieme_houppier"
+      ],
+      "yes": "AD",
+      "no": "n7"
+    },
+    "n7": {
+      "question": {
+        "de": "Ganzer Baum: Orthotrope oder plagiotrope Ersatztriebe mit normaler Verzweigung vorhanden?",
+        "fr": "Arbre entier : présence de suppléants orthotropes ou plagiotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes",
+        "suppleants_plagiotropes"
+      ],
+      "yes": "AI1",
+      "no": "n7b"
+    },
+    "n7b": {
+      "question": {
+        "de": "Houppier: Blatt-/Nadeldefizit ≥75%?",
+        "fr": "Houppier entier : déficit foliaire ≥ 75% ?"
+      },
+      "zone": {
+        "de": "Ganzer Houppier",
+        "fr": "Houppier entier"
+      },
+      "dma_refs": [
+        "deficit_foliaire"
+      ],
+      "yes": "AI2",
+      "no": "AI1"
+    }
+  },
+  "results": {
+    "M": {
+      "code": "M",
+      "label": {
+        "de": "Tot",
+        "fr": "Mort"
+      },
+      "stage": "dead",
+      "state": "dead",
+      "color": "#1a1a1a"
+    },
+    "ASa": {
+      "code": "ASa",
+      "label": {
+        "de": "Adult — Gesund",
+        "fr": "Adulte — Sain"
+      },
+      "stage": "adulte",
+      "state": "sain",
+      "color": "#4CAF50"
+    },
+    "AS1": {
+      "code": "AS1",
+      "label": {
+        "de": "Adult — Gestresst (1)",
+        "fr": "Adulte — Stressé (1)"
+      },
+      "stage": "adulte",
+      "state": "stresse",
+      "color": "#FFC107"
+    },
+    "AS2": {
+      "code": "AS2",
+      "label": {
+        "de": "Adult — Gestresst (2)",
+        "fr": "Adulte — Stressé (2)"
+      },
+      "stage": "adulte",
+      "state": "stresse",
+      "color": "#FFB300"
+    },
+    "AS3": {
+      "code": "AS3",
+      "label": {
+        "de": "Adult — Gestresst (3)",
+        "fr": "Adulte — Stressé (3)"
+      },
+      "stage": "adulte",
+      "state": "stresse",
+      "color": "#FFA500"
+    },
+    "AS4": {
+      "code": "AS4",
+      "label": {
+        "de": "Adult — Gestresst (4)",
+        "fr": "Adulte — Stressé (4)"
+      },
+      "stage": "adulte",
+      "state": "stresse",
+      "color": "#FF9800"
+    },
+    "AR1": {
+      "code": "AR1",
+      "label": {
+        "de": "Adult — Resilient (1)",
+        "fr": "Adulte — Résilient (1)"
+      },
+      "stage": "adulte",
+      "state": "resilient",
+      "color": "#2196F3"
+    },
+    "AR2": {
+      "code": "AR2",
+      "label": {
+        "de": "Adult — Resilient (2)",
+        "fr": "Adulte — Résilient (2)"
+      },
+      "stage": "adulte",
+      "state": "resilient",
+      "color": "#1976D2"
+    },
+    "AD": {
+      "code": "AD",
+      "label": {
+        "de": "Adult — Kronenrückzug",
+        "fr": "Adulte — Descente de cime"
+      },
+      "stage": "adulte",
+      "state": "descente_cime",
+      "color": "#FF9800"
+    },
+    "AI1": {
+      "code": "AI1",
+      "label": {
+        "de": "Adult — Irreversibel (1)",
+        "fr": "Adulte — Irréversible (1)"
+      },
+      "stage": "adulte",
+      "state": "deperissement_irreversible",
+      "color": "#F44336"
+    },
+    "AI2": {
+      "code": "AI2",
+      "label": {
+        "de": "Adult — Irreversibel (2)",
+        "fr": "Adulte — Irréversible (2)"
+      },
+      "stage": "adulte",
+      "state": "deperissement_irreversible",
+      "color": "#D32F2F"
+    }
+  },
+  "flowchart_images": [
+    "flowcharts/douglas.png"
+  ]
+}

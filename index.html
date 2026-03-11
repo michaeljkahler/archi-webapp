@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#2E7D32" />
+    <meta name="description" content="ARCHI Baumdiagnose — Interaktiver Bestimmungsschlüssel zur Vitalitätsdiagnose von Bäumen" />
+    <link rel="icon" type="image/svg+xml" href="./icons/favicon.svg" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <title>ARCHI Baumdiagnose</title>
+  </head>
+  <body class="bg-gray-50 text-gray-900 antialiased">
+    <div id="root"></div>
+    <script type="module" src="./src/main.jsx"></script>
+    <script>
+      // Safe Service Worker registration — only on HTTP(S), not file://
+      if (location.protocol.startsWith('http') && 'serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(function() {});
+        });
+      }
+    </script>
+  </body>
+</html>

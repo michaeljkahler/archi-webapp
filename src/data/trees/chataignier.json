@@ -1,0 +1,579 @@
+{
+  "id": "chataignier",
+  "names": {
+    "de": "Edelkastanie",
+    "fr": "Châtaignier"
+  },
+  "latin": [
+    "Castanea sativa"
+  ],
+  "form_types": [
+    "naturelle_libre"
+  ],
+  "applicable_stages": [
+    "jeune",
+    "adulte",
+    "mature",
+    "senescent"
+  ],
+  "start_node": "n1",
+  "nodes": {
+    "n1": {
+      "question": {
+        "de": "Baum dominant oder co-dominant: lebend?",
+        "fr": "Arbre dominant ou co-dominant : vivant ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [],
+      "yes": "n1b",
+      "no": "M"
+    },
+    "n1b": {
+      "question": {
+        "de": "Ganzer Baum: Interne Wurzeln (racines internes) vorhanden?",
+        "fr": "Arbre entier : présence de racines internes ?"
+      },
+      "zone": {
+        "de": "Stamm / Ganzer Baum",
+        "fr": "Tronc / Arbre entier"
+      },
+      "dma_refs": [
+        "racines_internes"
+      ],
+      "yes": "C",
+      "no": "n2"
+    },
+    "n2": {
+      "question": {
+        "de": "Stamm: Dupliziert in eine oder mehrere Hauptgabelungen (fourches maîtresses)?",
+        "fr": "Tronc : dupliqué en une ou plusieurs fourches maîtresses ?"
+      },
+      "zone": {
+        "de": "Stamm / Hauptgabelungen",
+        "fr": "Tronc / Fourches maîtresses"
+      },
+      "dma_refs": [
+        "fourches_maitresses"
+      ],
+      "yes": "n_adulte_1",
+      "no": "n3"
+    },
+    "n3": {
+      "question": {
+        "de": "Stammmodul: Typ 1 oder 2 (vegetativ oder mit Früchten)?",
+        "fr": "Module sommital du tronc : type 1 ou 2 ?"
+      },
+      "zone": {
+        "de": "Stammmodul",
+        "fr": "Module sommital du tronc"
+      },
+      "dma_refs": [
+        "module_sommital"
+      ],
+      "yes": "JSa",
+      "no": "n4"
+    },
+    "n4": {
+      "question": {
+        "de": "Stammspitze: Tot, gebrochen oder gekürzt?",
+        "fr": "Sommet du tronc : mort et/ou cassé/coupé ?"
+      },
+      "zone": {
+        "de": "Stammspitze",
+        "fr": "Sommet du tronc"
+      },
+      "dma_refs": [],
+      "yes": "n4b",
+      "no": "n4a"
+    },
+    "n4a": {
+      "question": {
+        "de": "Baumspitze: Klare Apikaldominanz?",
+        "fr": "Sommet de l'arbre : nette dominance apicale ?"
+      },
+      "zone": {
+        "de": "Baumspitze",
+        "fr": "Sommet de l'arbre"
+      },
+      "dma_refs": [],
+      "yes": "JS1",
+      "no": "n4a2"
+    },
+    "n4a2": {
+      "question": {
+        "de": "Stammspitze: Orthotrope Ersatztriebe mit normaler Verzweigung?",
+        "fr": "Sommet du tronc : présence de 1 ou plusieurs suppléants orthotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Stammspitze",
+        "fr": "Sommet du tronc"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes"
+      ],
+      "yes": "JS3",
+      "no": "JS2"
+    },
+    "n4b": {
+      "question": {
+        "de": "Stamm: Mortalität oder Bruch/Schnitt jünger als 1 Jahr?",
+        "fr": "Tronc : mortalité ou cassure/coupure récente (1 an ou moins) ?"
+      },
+      "zone": {
+        "de": "Stamm",
+        "fr": "Tronc"
+      },
+      "dma_refs": [],
+      "yes": "JS4",
+      "no": "n4c"
+    },
+    "n4c": {
+      "question": {
+        "de": "Stamm: Durch orthotrope Ersatztriebe mit normaler Verzweigung relayiert?",
+        "fr": "Tronc : relayé par 1 ou plusieurs suppléants orthotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Stamm",
+        "fr": "Tronc"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes"
+      ],
+      "yes": "n4c2",
+      "no": "n4c3"
+    },
+    "n4c2": {
+      "question": {
+        "de": "Ganzer Baum: Raum mit Ersatztrieben >25% plagiotrope und orthotrope mit normaler Verzweigung?",
+        "fr": "Arbre entier, espace occupé par les suppléants : composé à plus de 25% de plagiotropes et d'orthotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes",
+        "suppleants_plagiotropes"
+      ],
+      "yes": "JR1",
+      "no": "JR2"
+    },
+    "n4c3": {
+      "question": {
+        "de": "Ganzer Baum: Ersatztriebe (Suppléants) fehlen oder quasi fehlend?",
+        "fr": "Arbre entier : suppléants absents ou quasi absents ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [],
+      "yes": "JI2",
+      "no": "n4c4"
+    },
+    "n4c4": {
+      "question": {
+        "de": "Ganzer Baum: Raum mit Ersatztrieben >25% plagiotrope und orthotrope mit normaler Verzweigung?",
+        "fr": "Arbre entier, espace occupé par les suppléants : composé à plus de 25% de plagiotropes et d'orthotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes",
+        "suppleants_plagiotropes"
+      ],
+      "yes": "JI1",
+      "no": "JI2"
+    },
+    "n_adulte_1": {
+      "question": {
+        "de": "Gipfeläste des Originalhouppiers: vertikal und geradlinig?",
+        "fr": "Branches sommitales du houppier d'origine : verticales et rectilignes ?"
+      },
+      "zone": {
+        "de": "Gipfelbereich",
+        "fr": "Branches sommitales"
+      },
+      "dma_refs": [
+        "branches_verticales"
+      ],
+      "yes": "n_adulte_2",
+      "no": "n_adulte_5"
+    },
+    "n_adulte_2": {
+      "question": {
+        "de": "Obere Hälfte des Originalhouppiers (konkurrenzfrei): Raum mit Mortalität/Lücken ≥ 25%?",
+        "fr": "Moitié supérieure du houppier d'origine hors concurrence : part de l'espace occupé par la mortalité et/ou les « vides » liés aux chicots ≥ 25% ?"
+      },
+      "zone": {
+        "de": "Obere Kronenhälfte, konkurrenzfrei",
+        "fr": "Moitié supérieure du houppier hors concurrence"
+      },
+      "dma_refs": [
+        "mortalite_anormale"
+      ],
+      "yes": "n_adulte_7",
+      "no": "n_adulte_3"
+    },
+    "n_adulte_3": {
+      "question": {
+        "de": "Gipfeläste: Normale Verzweigung (Toleranz einzelner verarmter)?",
+        "fr": "Branches sommitales : ramification normale (tolérance de quelques ramifications appauvries) ?"
+      },
+      "zone": {
+        "de": "Gipfeläste",
+        "fr": "Branches sommitales"
+      },
+      "dma_refs": [
+        "ramification_normale"
+      ],
+      "yes": "ASa",
+      "no": "n_adulte_6"
+    },
+    "n_adulte_5": {
+      "question": {
+        "de": "Gipfeläste: Als abgesunkene Bogen (arcures affaissées) angeordnet?",
+        "fr": "Branches sommitales : agencées en arcures affaissées ?"
+      },
+      "zone": {
+        "de": "Gipfeläste",
+        "fr": "Branches sommitales"
+      },
+      "dma_refs": [
+        "arcures"
+      ],
+      "yes": "Sn",
+      "no": "n_adulte_6"
+    },
+    "n_adulte_6": {
+      "question": {
+        "de": "Ganzer Baum: Ersatztriebe (Suppléants) fehlen oder quasi fehlend?",
+        "fr": "Arbre entier : suppléants absents ou quasi absents ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes",
+        "suppleants_plagiotropes"
+      ],
+      "yes": "AS1",
+      "no": "n_adulte_6b"
+    },
+    "n_adulte_6b": {
+      "question": {
+        "de": "Raum der Ersatztriebe: >25% plagiotrope und orthotrope mit normaler Verzweigung?",
+        "fr": "Espace des suppléants : composé à plus de 25% de plagiotropes et d'orthotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Ersatztriebe am ganzen Baum",
+        "fr": "Suppléants sur l'arbre entier"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes",
+        "suppleants_plagiotropes",
+        "ramification_normale"
+      ],
+      "yes": "AR1",
+      "no": "AS2"
+    },
+    "n_adulte_7": {
+      "question": {
+        "de": "Verarmte Verzweigungen: >50% durch orthotrope Ersatztriebe mit normaler Verzweigung abgelöst?",
+        "fr": "Ramifications appauvries : plus de 50% relayées par des suppléants orthotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Verarmte Verzweigungen im Houppier",
+        "fr": "Ramifications appauvries"
+      },
+      "dma_refs": [
+        "ramification_appauvrie",
+        "suppleants_orthotropes"
+      ],
+      "yes": "n_adulte_7b",
+      "no": "n_adulte_8"
+    },
+    "n_adulte_7b": {
+      "question": {
+        "de": "Originalhouppier: >50% des Volumens durch orthotrope Ersatztriebe ersetzt?",
+        "fr": "Houppier d'origine : plus de 50% en cours de remplacement par des suppléants orthotropes à ramification normale ?"
+      },
+      "zone": {
+        "de": "Gesamter Originalhouppier",
+        "fr": "Houppier d'origine entier"
+      },
+      "dma_refs": [
+        "suppleants_orthotropes"
+      ],
+      "yes": "AR2",
+      "no": "AR1"
+    },
+    "n_adulte_8": {
+      "question": {
+        "de": "Ganzer Baum: Zweite strukturierte Krone innerhalb oder unterhalb des Originalhouppiers?",
+        "fr": "Arbre entier : formation d'un 2e houppier structuré emboîté dans le houppier d'origine ou inséré en-dessous ?"
+      },
+      "zone": {
+        "de": "Ganzer Baum",
+        "fr": "Arbre entier"
+      },
+      "dma_refs": [
+        "deuxieme_houppier"
+      ],
+      "yes": "AD",
+      "no": "n_adulte_9"
+    },
+    "n_adulte_9": {
+      "question": {
+        "de": "Unter den absterbenden Zonen: Originaläste mit ≥50% normaler Verzweigung?",
+        "fr": "Sous les zones dépérissantes : branches d'origine ayant au moins 50% de ramification normale ?"
+      },
+      "zone": {
+        "de": "Unterhalb absterbender Zonen",
+        "fr": "Sous les zones dépérissantes"
+      },
+      "dma_refs": [
+        "ramification_normale"
+      ],
+      "yes": "ARp",
+      "no": "n_adulte_10"
+    },
+    "n_adulte_10": {
+      "question": {
+        "de": "Ganzer Baum: Interne Wurzeln (racines internes) vorhanden?",
+        "fr": "Arbre entier : présence de racines internes ?"
+      },
+      "zone": {
+        "de": "Stamm / Ganzer Baum",
+        "fr": "Tronc / Arbre entier"
+      },
+      "dma_refs": [
+        "racines_internes"
+      ],
+      "yes": "AI1",
+      "no": "AI2"
+    }
+  },
+  "results": {
+    "M": {
+      "code": "M",
+      "label": {
+        "de": "Tot",
+        "fr": "Mort"
+      },
+      "stage": "dead",
+      "state": "dead",
+      "color": "#1a1a1a"
+    },
+    "C": {
+      "code": "C",
+      "label": {
+        "de": "Kolonie",
+        "fr": "Colonie"
+      },
+      "stage": "colonie",
+      "state": "colonie",
+      "color": "#795548"
+    },
+    "JSa": {
+      "code": "JSa",
+      "label": {
+        "de": "Jung — Gesund",
+        "fr": "Jeune — Sain"
+      },
+      "stage": "jeune",
+      "state": "sain",
+      "color": "#4CAF50"
+    },
+    "JS1": {
+      "code": "JS1",
+      "label": {
+        "de": "Jung — Gestresst (1)",
+        "fr": "Jeune — Stressé (1)"
+      },
+      "stage": "jeune",
+      "state": "stresse",
+      "color": "#FFC107"
+    },
+    "JS2": {
+      "code": "JS2",
+      "label": {
+        "de": "Jung — Gestresst (2)",
+        "fr": "Jeune — Stressé (2)"
+      },
+      "stage": "jeune",
+      "state": "stresse",
+      "color": "#FFB300"
+    },
+    "JS3": {
+      "code": "JS3",
+      "label": {
+        "de": "Jung — Gestresst (3)",
+        "fr": "Jeune — Stressé (3)"
+      },
+      "stage": "jeune",
+      "state": "stresse",
+      "color": "#FFA500"
+    },
+    "JS4": {
+      "code": "JS4",
+      "label": {
+        "de": "Jung — Gestresst (4)",
+        "fr": "Jeune — Stressé (4)"
+      },
+      "stage": "jeune",
+      "state": "stresse",
+      "color": "#FF9800"
+    },
+    "JR1": {
+      "code": "JR1",
+      "label": {
+        "de": "Jung — Resilient (1)",
+        "fr": "Jeune — Résilient (1)"
+      },
+      "stage": "jeune",
+      "state": "resilient",
+      "color": "#2196F3"
+    },
+    "JR2": {
+      "code": "JR2",
+      "label": {
+        "de": "Jung — Resilient (2)",
+        "fr": "Jeune — Résilient (2)"
+      },
+      "stage": "jeune",
+      "state": "resilient",
+      "color": "#1976D2"
+    },
+    "JI1": {
+      "code": "JI1",
+      "label": {
+        "de": "Jung — Irreversibel (1)",
+        "fr": "Jeune — Irréversible (1)"
+      },
+      "stage": "jeune",
+      "state": "deperissement_irreversible",
+      "color": "#F44336"
+    },
+    "JI2": {
+      "code": "JI2",
+      "label": {
+        "de": "Jung — Irreversibel (2)",
+        "fr": "Jeune — Irréversible (2)"
+      },
+      "stage": "jeune",
+      "state": "deperissement_irreversible",
+      "color": "#D32F2F"
+    },
+    "ASa": {
+      "code": "ASa",
+      "label": {
+        "de": "Adult — Gesund",
+        "fr": "Adulte — Sain"
+      },
+      "stage": "adulte",
+      "state": "sain",
+      "color": "#4CAF50"
+    },
+    "Sn": {
+      "code": "Sn",
+      "label": {
+        "de": "Seneszent",
+        "fr": "Sénescent"
+      },
+      "stage": "senescent",
+      "state": "sain",
+      "color": "#9E9E9E"
+    },
+    "AS1": {
+      "code": "AS1",
+      "label": {
+        "de": "Adult — Gestresst (1)",
+        "fr": "Adulte — Stressé (1)"
+      },
+      "stage": "adulte",
+      "state": "stresse",
+      "color": "#FFC107"
+    },
+    "AS2": {
+      "code": "AS2",
+      "label": {
+        "de": "Adult — Gestresst (2)",
+        "fr": "Adulte — Stressé (2)"
+      },
+      "stage": "adulte",
+      "state": "stresse",
+      "color": "#FFB300"
+    },
+    "AR1": {
+      "code": "AR1",
+      "label": {
+        "de": "Adult — Resilient (1)",
+        "fr": "Adulte — Résilient (1)"
+      },
+      "stage": "adulte",
+      "state": "resilient",
+      "color": "#2196F3"
+    },
+    "AR2": {
+      "code": "AR2",
+      "label": {
+        "de": "Adult — Resilient (2)",
+        "fr": "Adulte — Résilient (2)"
+      },
+      "stage": "adulte",
+      "state": "resilient",
+      "color": "#1976D2"
+    },
+    "AD": {
+      "code": "AD",
+      "label": {
+        "de": "Adult — Kronenrückzug",
+        "fr": "Adulte — Descente de cime"
+      },
+      "stage": "adulte",
+      "state": "descente_cime",
+      "color": "#FF9800"
+    },
+    "ARp": {
+      "code": "ARp",
+      "label": {
+        "de": "Adult — Repli",
+        "fr": "Adulte — Repli"
+      },
+      "stage": "adulte",
+      "state": "repli",
+      "color": "#9C27B0"
+    },
+    "AI1": {
+      "code": "AI1",
+      "label": {
+        "de": "Adult — Irreversibel (1)",
+        "fr": "Adulte — Irréversible (1)"
+      },
+      "stage": "adulte",
+      "state": "deperissement_irreversible",
+      "color": "#F44336"
+    },
+    "AI2": {
+      "code": "AI2",
+      "label": {
+        "de": "Adult — Irreversibel (2)",
+        "fr": "Adulte — Irréversible (2)"
+      },
+      "stage": "adulte",
+      "state": "deperissement_irreversible",
+      "color": "#D32F2F"
+    }
+  },
+  "flowchart_images": [
+    "flowcharts/chataignier_p1.png",
+    "flowcharts/chataignier_p2.png"
+  ]
+}
