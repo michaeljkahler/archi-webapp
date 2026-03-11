@@ -16,7 +16,10 @@
       // Safe Service Worker registration — only on HTTP(S), not file://
       if (location.protocol.startsWith('http') && 'serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(function() {});
+          navigator.serviceWorker.register('./sw.js', { scope: './' }).then(function(reg) {
+            // Check for updates periodically
+            setInterval(function() { reg.update(); }, 60 * 60 * 1000);
+          }).catch(function() {});
         });
       }
     </script>

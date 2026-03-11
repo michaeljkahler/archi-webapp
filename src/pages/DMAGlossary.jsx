@@ -146,10 +146,7 @@ export default function DMAGlossary() {
                         {/* Diagnostic value */}
                         {marker.diagnostic_value?.[language] && (
                           <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                            <h4 className="text-sm font-semibold text-green-800 mb-1">
-                              {t('glossary.diagnostic_value')}
-                            </h4>
-                            <p className="text-sm text-green-700 leading-relaxed">
+                            <p className="text-sm text-green-700 leading-relaxed italic">
                               {marker.diagnostic_value[language]}
                             </p>
                           </div>

@@ -27,8 +27,8 @@ export default defineConfig({
     react(),
     removeCrossOrigin(),
     VitePWA({
-      registerType: 'prompt',  // Don't auto-register on file://
-      injectRegister: null,    // We handle SW registration manually
+      registerType: 'autoUpdate',
+      injectRegister: null,    // We handle SW registration in index.html
       includeAssets: ['icons/*.png', 'images/**/*'],
       manifest: {
         name: 'ARCHI Baumdiagnose',
