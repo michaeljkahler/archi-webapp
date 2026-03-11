@@ -62,8 +62,10 @@
     "stresse": "Stressé",
     "resilient": "Résilient",
     "descente_cime": "Descente de cime",
+    "descente": "Descente de cime",
     "repli": "Repli",
     "deperissement_irreversible": "Dépérissement irréversible",
+    "irreversible": "Dépérissement irréversible",
     "mort": "Mort",
     "senescent": "Sénescent",
     "colonie": "Colonie"
@@ -90,7 +92,8 @@
     "summary": "Résumé",
     "no_sites": "Aucun peuplement",
     "delete_confirm": "Supprimer ce peuplement ?",
-    "edit": "Modifier le peuplement"
+    "edit": "Modifier le peuplement",
+    "no_location": "Aucun emplacement spécifié"
   },
   "sites": {
     "title": "Peuplements",
@@ -133,12 +136,21 @@
   },
   "glossary": {
     "title": "Glossaire",
+    "subtitle": "Référentiel des dendromarqueurs (DMA) pour l'évaluation de la vitalité",
     "search": "Rechercher dans le glossaire",
     "category": "Catégorie",
     "description": "Description",
+    "diagnostic_value": "Valeur diagnostique",
     "guide_page": "Page du guide",
     "all_categories": "Toutes les catégories",
-    "noResults": "Aucun résultat trouvé"
+    "noResults": "Aucun résultat trouvé",
+    "categories": {
+      "houppier": "Houppier (Couronne)",
+      "branches": "Branches et ramification",
+      "tronc": "Tronc",
+      "fleche": "Flèche",
+      "arbre_entier": "Arbre entier"
+    }
   },
   "about": {
     "title": "À propos de cette application",
@@ -149,7 +161,43 @@
     "citation": "Référence",
     "citationText": "Drénou C., 2023 – Évaluer la vitalité des arbres. Guide d'utilisation de la méthode ARCHI. Éditions CNPF-IDF, Paris, 64 p.",
     "version": "Version 1.0.0",
-    "disclaimer": "Cet outil de diagnostic est destiné à aider les professionnels à évaluer systématiquement la vitalité des arbres. Il ne remplace pas l'expertise terrain ou un contrôle phytosanitaire professionnel."
+    "disclaimer": "Cet outil de diagnostic est destiné à aider les professionnels à évaluer systématiquement la vitalité des arbres. Il ne remplace pas l'expertise terrain ou un contrôle phytosanitaire professionnel.",
+    "dma_categories": "Catégories DMA",
+    "dma_categories_intro": "La méthode ARCHI repose sur l'évaluation de l'arbre selon les catégories de vitalité suivantes :",
+    "state_sain": "Sain",
+    "state_sain_desc": "Bon état général, densité de couronne normale, aucun dégât visible.",
+    "state_stresse": "Stressé",
+    "state_stresse_desc": "Quelques symptômes de stress, dégâts légers au niveau de la couronne ou du tronc.",
+    "state_resilient": "Résilient",
+    "state_resilient_desc": "Capacité de récupération, signes de régénération visibles après un épisode de stress.",
+    "state_descente": "Descente de cime",
+    "state_descente_desc": "Détérioration progressive visible, la cime se rétracte.",
+    "state_repli": "Repli",
+    "state_repli_desc": "Retrait naturel, croissance fortement réduite, éclaircissement de la couronne.",
+    "state_irreversible": "Irréversible",
+    "state_irreversible_desc": "Dégâts graves sans possibilité de récupération, dépérissement probable.",
+    "state_mort": "Mort",
+    "state_mort_desc": "L'arbre est mort, aucun signe de vie.",
+    "how_to_use": "Guide d'utilisation",
+    "step1_title": "Sélectionner l'essence",
+    "step1_desc": "Choisissez l'essence d'arbre que vous souhaitez diagnostiquer.",
+    "step2_title": "Répondre aux questions",
+    "step2_desc": "Répondez aux questions posées en vous basant sur votre observation visuelle de l'arbre.",
+    "step3_title": "Obtenir le résultat",
+    "step3_desc": "Le système fournit la catégorie de vitalité la plus probable pour l'arbre.",
+    "step4_title": "Enregistrer et exporter",
+    "step4_desc": "Enregistrez vos données ou exportez-les en CSV/PDF.",
+    "offline_title": "Fonctionnalité hors ligne",
+    "offline_desc": "ARCHI fonctionne entièrement hors ligne. Toutes les données sont stockées localement dans le navigateur — idéal pour le travail de terrain sans connexion internet.",
+    "technical_title": "Informations techniques",
+    "storage_title": "Stockage des données",
+    "storage_desc": "L'application utilise IndexedDB pour le stockage local. Vos données restent entièrement sous votre contrôle.",
+    "privacy_title": "Protection des données",
+    "privacy_desc": "Aucune donnée personnelle n'est transmise à des serveurs externes. ARCHI respecte pleinement votre vie privée.",
+    "platforms_title": "Plateformes",
+    "platforms_desc": "ARCHI fonctionne sur ordinateur, tablette et mobile. L'application peut être installée comme Progressive Web App (PWA).",
+    "support_title": "Langues disponibles",
+    "support_desc": "ARCHI prend en charge l'allemand et le français avec détection automatique de la langue selon les paramètres de votre navigateur."
   },
   "common": {
     "save": "Enregistrer",
@@ -163,12 +211,18 @@
     "success": "Succès",
     "confirm": "Confirmer",
     "add": "Ajouter",
-    "statistics": "Statistiques"
+    "statistics": "Statistiques",
+    "avg_dbh": "Ø DHP",
+    "required": "Champ obligatoire"
   },
   "diagnose": {
     "title": "Diagnostic",
     "selectSpecies": "Sélectionner une essence",
     "progress": "Progression"
+  },
+  "footer": {
+    "citation_label": "Référence :",
+    "copyright": "ARCHI Diagnostic des arbres. Basé sur la méthode CNPF."
   },
   "forms": {
     "architecturee": "Forme architecturée",

@@ -62,8 +62,10 @@
     "stresse": "Gestresst",
     "resilient": "Resilient",
     "descente_cime": "Kronenrückzug",
+    "descente": "Kronenrückzug",
     "repli": "Repli",
     "deperissement_irreversible": "Irreversibler Verfall",
+    "irreversible": "Irreversibler Verfall",
     "mort": "Tot",
     "senescent": "Seneszent",
     "colonie": "Kolonie"
@@ -90,7 +92,8 @@
     "summary": "Zusammenfassung",
     "no_sites": "Keine Bestände vorhanden",
     "delete_confirm": "Bestand wirklich löschen?",
-    "edit": "Bestand bearbeiten"
+    "edit": "Bestand bearbeiten",
+    "no_location": "Kein Standort angegeben"
   },
   "sites": {
     "title": "Bestände",
@@ -133,12 +136,21 @@
   },
   "glossary": {
     "title": "Glossar",
+    "subtitle": "Nachschlagewerk der Dendromarker (DMA) zur Vitalitätsbewertung",
     "search": "Im Glossar suchen",
     "category": "Kategorie",
     "description": "Beschreibung",
+    "diagnostic_value": "Diagnostischer Wert",
     "guide_page": "Handbuchseite",
     "all_categories": "Alle Kategorien",
-    "noResults": "Keine Ergebnisse gefunden"
+    "noResults": "Keine Ergebnisse gefunden",
+    "categories": {
+      "houppier": "Kronenbereich (Houppier)",
+      "branches": "Äste und Verzweigung",
+      "tronc": "Stamm",
+      "fleche": "Wipfeltrieb (Flèche)",
+      "arbre_entier": "Ganzer Baum"
+    }
   },
   "about": {
     "title": "Über diese Anwendung",
@@ -149,7 +161,43 @@
     "citation": "Quellenangabe",
     "citationText": "Drénou C., 2023 – Évaluer la vitalité des arbres. Guide d'utilisation de la méthode ARCHI. Éditions CNPF-IDF, Paris, 64 p.",
     "version": "Version 1.0.0",
-    "disclaimer": "Dieses Diagnosetool soll Fachleuten helfen, die Baumvitalität systematisch zu bewerten. Es ersetzt nicht die Feldexpertise oder professionelle Baumkontrolle."
+    "disclaimer": "Dieses Diagnosetool soll Fachleuten helfen, die Baumvitalität systematisch zu bewerten. Es ersetzt nicht die Feldexpertise oder professionelle Baumkontrolle.",
+    "dma_categories": "DMA-Kategorien",
+    "dma_categories_intro": "Die ARCHI-Methode basiert auf der Bewertung des Baums in folgende Vitalitätskategorien:",
+    "state_sain": "Sain (Gesund)",
+    "state_sain_desc": "Guter Zustand, normale Kronendichte, keine Schäden sichtbar.",
+    "state_stresse": "Stressé (Gestresst)",
+    "state_stresse_desc": "Einige Symptome von Stress, leichte Schäden an Krone oder Stamm.",
+    "state_resilient": "Résilient (Resilient)",
+    "state_resilient_desc": "Erholungsfähig, Regenerationszeichen sichtbar nach Stressereignis.",
+    "state_descente": "Descente de cime (Kronenrückzug)",
+    "state_descente_desc": "Progressive Verschlechterung erkennbar, Krone zieht sich zurück.",
+    "state_repli": "Repli (Rückzug)",
+    "state_repli_desc": "Natürlicher Rückzug, Wachstum stark reduziert, Kronenverlichtung.",
+    "state_irreversible": "Irréversible (Irreversibel)",
+    "state_irreversible_desc": "Schwere Schäden ohne Erholungsmöglichkeit, Absterben wahrscheinlich.",
+    "state_mort": "Mort (Tot)",
+    "state_mort_desc": "Baum ist abgestorben, keine Lebenszeichen mehr vorhanden.",
+    "how_to_use": "Anleitung zur Nutzung",
+    "step1_title": "Baumart auswählen",
+    "step1_desc": "Wählen Sie die Baumart aus, die Sie diagnostizieren möchten.",
+    "step2_title": "Fragen beantworten",
+    "step2_desc": "Beantworten Sie die gestellten Fragen basierend auf Ihrer visuellen Beobachtung am Baum.",
+    "step3_title": "Ergebnis erhalten",
+    "step3_desc": "Das System liefert die wahrscheinlichste Vitalitätskategorie für den Baum.",
+    "step4_title": "Speichern und Exportieren",
+    "step4_desc": "Speichern Sie Ihre Daten oder exportieren Sie sie als CSV/PDF.",
+    "offline_title": "Offline-Funktionalität",
+    "offline_desc": "ARCHI funktioniert vollständig offline. Alle Daten werden lokal im Browser gespeichert — perfekt für die Feldarbeit ohne Internetverbindung.",
+    "technical_title": "Technische Informationen",
+    "storage_title": "Datenspeicher",
+    "storage_desc": "Die Anwendung verwendet IndexedDB zur lokalen Speicherung. Ihre Daten bleiben vollständig unter Ihrer Kontrolle.",
+    "privacy_title": "Datenschutz",
+    "privacy_desc": "Keine persönlichen Daten werden an externe Server übertragen. ARCHI respektiert Ihre Privatsphäre vollständig.",
+    "platforms_title": "Plattformen",
+    "platforms_desc": "ARCHI funktioniert auf Desktop, Tablet und Mobilgeräten. Die App kann als Progressive Web App (PWA) installiert werden.",
+    "support_title": "Sprachunterstützung",
+    "support_desc": "ARCHI unterstützt Deutsch und Französisch mit automatischer Spracherkennung basierend auf Ihren Browser-Einstellungen."
   },
   "common": {
     "save": "Speichern",
@@ -163,12 +211,18 @@
     "success": "Erfolg",
     "confirm": "Bestätigen",
     "add": "Hinzufügen",
-    "statistics": "Statistiken"
+    "statistics": "Statistiken",
+    "avg_dbh": "Ø BHD",
+    "required": "Pflichtfeld"
   },
   "diagnose": {
     "title": "Diagnose",
     "selectSpecies": "Baumart auswählen",
     "progress": "Fortschritt"
+  },
+  "footer": {
+    "citation_label": "Zitierweise:",
+    "copyright": "ARCHI Baumdiagnose. Basierend auf der Methode CNPF."
   },
   "forms": {
     "architecturee": "Architekturform",
